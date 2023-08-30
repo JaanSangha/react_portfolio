@@ -4,8 +4,9 @@ function Footer() {
     const year = new Date().getFullYear();
     return (
         <footer>
-            <p>Copywrite ⓒ {year}</p>
-
+        <div>
+        <p>Copywrite ⓒ Jaan Sangha {year}</p>
+        </div>
         </footer>
     );
 
