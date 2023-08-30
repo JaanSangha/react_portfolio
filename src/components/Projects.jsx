@@ -13,7 +13,7 @@ function Projects() {
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
   <div class="col">
-    <div class="card shadow-sm" style={{backgroundColor: "#E4E4D0"}}>
+    <div class="card shadow-sm" style={{backgroundColor: "#AEC3AE"}}>
      <img src={Cardemon} alt=""/>
       <div class="card-body">
         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>

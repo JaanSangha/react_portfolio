@@ -5,9 +5,11 @@
   }
 
 header {
-    background-color: #94A684;
+    background-image: url(GreenBG.jpg);
+    background-size: cover ;
     margin: auto -16px;
-    padding: 32px;
+    padding: 16px;
+
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
 
@@ -17,12 +19,20 @@ header h1 {
     text-align: center;
 }
 
+.centered {
+    text-align: center;
+}
+
+.resume {
+    text-align: center;
+    padding: 32px;
+}
 h2{
     text-align: center;
-
 }
+
 body {
-    background: #AEC3AE;
+    background: #94A684;
     padding: 0 16px;
   }
 
@@ -30,6 +40,9 @@ cards {
     padding: 32px;
 }
 
+headerimg{
+    padding: 16px;
+}
 footer {
     background-color: #FFEEF4;
     text-align: center;
