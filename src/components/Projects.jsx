@@ -1,7 +1,6 @@
 import React from "react";
 import Cardemon from "./CardemonThumbRounded.PNG"
 import FFThumb from "./FFThumbNailRounded.PNG"
-import RCThumb from "./RCThumbRounded.jpg"
 
 function Projects() {
     return (
@@ -15,7 +14,7 @@ function Projects() {
 
   <div class="col">
     <div class="card shadow-sm" style={{backgroundColor: "#E4E4D0"}}>
-     <img src={Cardemon} />
+     <img src={Cardemon} alt=""/>
       <div class="card-body">
         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
         <div class="d-flex justify-content-between align-items-center">
@@ -26,7 +25,7 @@ function Projects() {
   </div>
   <div class="col">
     <div class="card shadow-sm" style={{backgroundColor: "#E4E4D0"}}>
-    <img src={FFThumb} />
+    <img src={FFThumb} alt=""/>
       <div class="card-body">
         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
         <div class="d-flex justify-content-between align-items-center">
