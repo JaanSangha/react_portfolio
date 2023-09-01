@@ -1,17 +1,18 @@
 import React from "react";
-import Header from "./Header";
-import Footer from "./Footer";
-import Projects from "./Projects";
-import Resume from "./Resume"
+import Home from "./Home";
+import Cardemon from "./Cardemon";
+import { BrowserRouter as Router, Route, Link, Routes} from "react-router-dom";
 
 function App() {
 
 return (
     <div>
-        <Header />
-        <Projects />
-        <Resume />
-        <Footer />
+        <Router>
+            <Routes>
+                <Route exact path="/" element={<Home />} />
+                <Route exact path="/projects-cardemon" element={<Cardemon />} />
+            </Routes>
+        </Router>
     </div>
     );
 

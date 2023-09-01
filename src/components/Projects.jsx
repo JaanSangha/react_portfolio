@@ -1,6 +1,7 @@
 import React from "react";
-import Cardemon from "./CardemonThumbRounded.PNG"
-import FFThumb from "./FFThumbNailRounded.PNG"
+import Cardemon from "./img/CardemonThumbRounded.PNG"
+import FFThumb from "./img/FFThumbNailRounded.PNG"
+import { Link } from "react-router-dom";
 
 function Projects() {
     return (
@@ -18,7 +19,9 @@ function Projects() {
       <div class="card-body">
         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
         <div class="d-flex justify-content-between align-items-center">
+          <Link to="/projects-cardemon">
             <button type="button" class="btn btn-dark">View</button>
+          </Link>
         </div>
       </div>
     </div>
@@ -30,8 +33,9 @@ function Projects() {
         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
         <div class="d-flex justify-content-between align-items-center">
           <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+            <Link to="/projects-cardemon">
+              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+            </Link>
           </div>
           <small class="text-body-secondary">9 mins</small>
         </div>

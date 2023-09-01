@@ -41,7 +41,8 @@ cards {
 }
 
 headerimg{
-    padding: 16px;
+    width: 200px;
+    height: 200px;
 }
 footer {
     background-color: #FFEEF4;
