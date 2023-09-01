@@ -19,6 +19,12 @@ header h1 {
     text-align: center;
 }
 
+.headersmall {
+    background-color: #AEC3AE;
+    margin: auto -16px;
+
+}
+
 .centered {
     text-align: center;
 }
@@ -40,10 +46,6 @@ cards {
     padding: 32px;
 }
 
-headerimg{
-    width: 200px;
-    height: 200px;
-}
 footer {
     background-color: #FFEEF4;
     text-align: center;

@@ -1,8 +1,15 @@
 import React from "react";
 
-function SmallHeader() {
+function SmallHeader(props) {
     return (
-<h1>oops</h1>
+        <div className="headersmall">
+            <nav aria-label="breadcrumb">
+            <ol class="breadcrumb p-3 rounded-3">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{props.name}</li>
+            </ol>
+            </nav>
+        </div>
     );
 }
 

@@ -1,10 +1,12 @@
 import React from "react";
 import Footer from "./Footer";
+import SmallHeader from "./SmallHeader";
 
 function Cardemon() {
 
 return (
     <div>
+    <SmallHeader name="Cardemon" />
         <div class="container text-center">
             <div class="col-lg-10 mx-auto">
                 <h1>Cardemon</h1>

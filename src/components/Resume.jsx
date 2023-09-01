@@ -5,7 +5,7 @@ function Resume(){
     return(
         <div className="resume">
         <h1>My CV</h1>
-        <iframe title="Resume" src={JaanResume} width="60%" height="1180px">
+        <iframe title="Resume" src={JaanResume} width="70%" height="1180px">
         </iframe>
     </div>
     );
