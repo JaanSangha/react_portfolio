@@ -10,7 +10,7 @@ return (
         <div class="container text-center">
             <div class="col-lg-10 mx-auto">
                 <h1>Cardemon</h1>
-                <iframe title="Cardemon Demo Video" width="500" height="400"
+                <iframe title="Cardemon Demo Video" width= "80%" height="400"
 				    src="https://www.youtube.com/embed/QwF3tM-Efs4?si=q4pkhR6e4FVadh0f">
 				</iframe>
             </div>
