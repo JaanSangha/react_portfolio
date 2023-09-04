@@ -11,7 +11,7 @@ function Projects() {
     return (
         <cards>
         <div>
-            <h2>Projects</h2>
+            <h1 className="centered">Projects</h1>
         </div>
 <div class="container">
 
@@ -32,86 +32,84 @@ function Projects() {
     </div>
   </div>
   <div class="col">
-    <div class="card shadow-sm" style={{backgroundColor: "#E4E4D0"}}>
+    <div class="card shadow-sm" style={{backgroundColor: "#AEC3AE"}}>
     <img src={RCThumb} alt=""/>
       <div class="card-body">
       <h3 className="centered">Roly Controly</h3>
         <p class="card-text">I am currently working on creating a mobile game focused on tilt-controls. This game is expected to release this fall on the Play Store.</p>
-        <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex justify-content-center align-items-center">
           <div class="btn-group">
             <Link to="/projects-rolycontroly">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+              <button type="button" class="btn btn-dark">View</button>
             </Link>
           </div>
-          <small class="text-body-secondary">9 mins</small>
         </div>
       </div>
     </div>
   </div>
   <div class="col">
-    <div class="card shadow-sm" style={{backgroundColor: "#E4E4D0"}}>
+    <div class="card shadow-sm" style={{backgroundColor: "#AEC3AE"}}>
     <img src={FFThumb} alt=""/>
       <div class="card-body">
       <h3 className="centered">Flooded Fox</h3>
         <p class="card-text">I created a game using Unity with the theme "Running out of space" for a game jam in one day. The player must avoid the rising water level and make it to the rescue vehicle.</p>
-        <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex justify-content-center align-items-center">
           <div class="btn-group">
           <Link to="/projects-floodedfox">
-            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+            <button type="button" class="btn btn-dark">View</button>
             </Link>
           </div>
-          <small class="text-body-secondary">9 mins</small>
         </div>
       </div>
     </div>
   </div>
 
   <div class="col">
-    <div class="card shadow-sm" style={{backgroundColor: "#E4E4D0"}}>
+    <div class="card shadow-sm" style={{backgroundColor: "#AEC3AE"}}>
     <img src={CGThumb} alt=""/>
       <div class="card-body" >
       <h3 className="centered">Car Battle</h3>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <div class="d-flex justify-content-between align-items-center">
+        <p class="card-text">Created a car battle game with a partner using Unreal engine. There are turrets around the map that the player must defeat to win the game.</p>
+        <div class="d-flex justify-content-center align-items-center">
           <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+          <Link to="/projects-carbattle">
+            <button type="button" class="btn btn-dark">View</button>
+            </Link>
           </div>
-          <small class="text-body-secondary">9 mins</small>
         </div>
       </div>
     </div>
   </div>
   
   <div class="col">
-    <div class="card shadow-sm" style={{backgroundColor: "#E4E4D0"}}>
+    <div class="card shadow-sm" style={{backgroundColor: "#AEC3AE"}}>
     <img src={RRThumb} alt=""/>
       <div class="card-body" >
       <h3 className="centered">Reckless Rubber</h3>
         <p class="card-text">Created a game using Unity for a game jam with the theme "10 Seconds". The player must prepare thier car and then race around the track and hit each checkpoint within 10 seconds.</p>
-        <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex justify-content-center align-items-center">
           <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+          <Link to="/projects-recklessrubber">
+            <button type="button" class="btn btn-dark">View</button>
+            </Link>
           </div>
-          <small class="text-body-secondary">9 mins</small>
         </div>
       </div>
     </div>
   </div>
 
   <div class="col">
-    <div class="card shadow-sm" style={{backgroundColor: "#E4E4D0"}}>
+    <div class="card shadow-sm" style={{backgroundColor: "#AEC3AE"}}>
     <img src={ARThumb} alt=""/>
       <div class="card-body" >
       <h3 className="centered">AR Objects App</h3>
         <p class="card-text">Created an app with AR Core that enables the user to place diferent types of 3D furniture or items in any room they want using the camera on their phone.</p>
-        <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex justify-content-center align-items-center">
           <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+          <Link to="/projects-arapp">
+            <button type="button" class="btn btn-dark">View</button>
+            </Link>
           </div>
-          <small class="text-body-secondary">9 mins</small>
         </div>
       </div>
     </div>
