@@ -7,12 +7,14 @@ import CarBattle from "./CarBattle";
 import RecklessRubber from "./RecklessRubber"
 import ArApp from "./ArApp";
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import ScrollToTop from './ScrollToTop';
 
 function App() {
 
 return (
     <div>
         <Router>
+        <ScrollToTop />
             <Routes>
                 <Route exact path="/" element={<Home />} />
                 <Route exact path="/projects-cardemon" element={<Cardemon />} />
