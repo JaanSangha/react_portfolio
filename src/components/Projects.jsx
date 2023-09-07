@@ -20,7 +20,7 @@ function Projects() {
 
   <div class="col">
     <Link to="/projects-cardemon">
-      <motion.div class="card shadow-sm" whileHover={{ scale: 1.1 }}>
+      <motion.div class="card shadow-sm" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
         <img class="rounded" src={Cardemon} alt=""/>
         <div class="card-img-overlay">
           <h3 class="card-title">Cardemon</h3>
@@ -31,7 +31,7 @@ function Projects() {
 
   <div class="col">
     <Link to="/projects-rolycontroly">
-      <motion.div class="card shadow-sm" whileHover={{ scale: 1.1 }}>
+      <motion.div class="card shadow-sm" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
         <img class="rounded" src={RCThumb} alt=""/>
         <div class="card-img-overlay">
           <h3 className="centered">Roly Controly</h3>
@@ -42,7 +42,7 @@ function Projects() {
 
   <div class="col">
     <Link to="/projects-floodedfox">
-      <motion.div class="card shadow-sm" whileHover={{ scale: 1.1 }}>
+      <motion.div class="card shadow-sm" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
         <img src={FFThumb} alt=""/>
         <div class="card-img-overlay">
           <h3 className="centered">Flooded Fox</h3>
@@ -53,7 +53,7 @@ function Projects() {
 
   <div class="col">
     <Link to="/projects-carbattle">
-      <motion.div class="card shadow-sm" whileHover={{ scale: 1.1 }}>
+      <motion.div class="card shadow-sm" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
         <img src={CGThumb} alt=""/>
         <div class="card-img-overlay" >
           <h3 className="centered">Car Battle</h3>
@@ -64,7 +64,7 @@ function Projects() {
   
   <div class="col">
     <Link to="/projects-recklessrubber">
-      <motion.div class="card shadow-sm" whileHover={{ scale: 1.1 }}>
+      <motion.div class="card shadow-sm" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
         <img src={RRThumb} alt=""/>
         <div class="card-img-overlay" >
           <h3 className="centered">Reckless Rubber</h3>
@@ -75,7 +75,7 @@ function Projects() {
 
   <div class="col">
     <Link to="/projects-arapp">
-      <motion.div class="card shadow-sm" whileHover={{ scale: 1.1 }}>
+      <motion.div class="card shadow-sm" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
         <img src={ARThumb} alt=""/>
         <div class="card-img-overlay" >
           <h3 className="centered">AR Objects App</h3>
