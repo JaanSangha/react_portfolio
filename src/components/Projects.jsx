@@ -1,10 +1,11 @@
 import React from "react";
-import Cardemon from "./img/CardemonThumbRounded.PNG"
-import FFThumb from "./img/FFThumbNailRounded.PNG"
-import RCThumb from "./img/RCThumbRounded.jpg"
-import CGThumb from "./img/CarGamePic.PNG"
-import RRThumb from "./img/RaceThumbnail.png"
-import ARThumb from "./img/ARBookcase2Edit.jpg"
+import {motion} from "framer-motion";
+import Cardemon from "./img/CardemonThumbRounded.PNG";
+import FFThumb from "./img/FFThumbNailRounded.PNG";
+import RCThumb from "./img/RCThumbRounded.jpg";
+import CGThumb from "./img/CarGamePic.PNG";
+import RRThumb from "./img/RaceThumbnail.png";
+import ARThumb from "./img/ARBookcase2Edit.jpg";
 import { Link } from "react-router-dom";
 
 function Projects() {
@@ -15,107 +16,75 @@ function Projects() {
         </div>
 <div class="container">
 
-<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
 
   <div class="col">
-    <div class="card shadow-sm" style={{backgroundColor: "#AEC3AE"}}>
-     <img src={Cardemon} alt=""/>
-      <div class="card-body">
-      <h3 className="centered">Cardemon</h3>
-        <p class="card-text">I am currently working on creating a turn based monster catching game that also includes classic RPG combat styles as well as farming and crafting.</p>
-        <div class="d-flex justify-content-center align-items-center">
-          <Link to="/projects-cardemon">
-            <button type="button" class="btn btn-dark">View</button>
-          </Link>
+    <Link to="/projects-cardemon">
+      <motion.div class="card shadow-sm" whileHover={{ scale: 1.1 }}>
+        <img class="rounded" src={Cardemon} alt=""/>
+        <div class="card-img-overlay">
+          <h3 class="card-title">Cardemon</h3>
         </div>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card shadow-sm" style={{backgroundColor: "#AEC3AE"}}>
-    <img src={RCThumb} alt=""/>
-      <div class="card-body">
-      <h3 className="centered">Roly Controly</h3>
-        <p class="card-text">I am currently working on creating a mobile game focused on tilt-controls. This game is expected to release this fall on the Play Store.</p>
-        <div class="d-flex justify-content-center align-items-center">
-          <div class="btn-group">
-            <Link to="/projects-rolycontroly">
-              <button type="button" class="btn btn-dark">View</button>
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card shadow-sm" style={{backgroundColor: "#AEC3AE"}}>
-    <img src={FFThumb} alt=""/>
-      <div class="card-body">
-      <h3 className="centered">Flooded Fox</h3>
-        <p class="card-text">I created a game using Unity with the theme "Running out of space" for a game jam in one day. The player must avoid the rising water level and make it to the rescue vehicle.</p>
-        <div class="d-flex justify-content-center align-items-center">
-          <div class="btn-group">
-          <Link to="/projects-floodedfox">
-            <button type="button" class="btn btn-dark">View</button>
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
+      </motion.div>
+    </Link>
   </div>
 
   <div class="col">
-    <div class="card shadow-sm" style={{backgroundColor: "#AEC3AE"}}>
-    <img src={CGThumb} alt=""/>
-      <div class="card-body" >
-      <h3 className="centered">Car Battle</h3>
-        <p class="card-text">Created a car battle game with a partner using Unreal engine. There are turrets around the map that the player must defeat to win the game.</p>
-        <div class="d-flex justify-content-center align-items-center">
-          <div class="btn-group">
-          <Link to="/projects-carbattle">
-            <button type="button" class="btn btn-dark">View</button>
-            </Link>
-          </div>
+    <Link to="/projects-rolycontroly">
+      <motion.div class="card shadow-sm" whileHover={{ scale: 1.1 }}>
+        <img class="rounded" src={RCThumb} alt=""/>
+        <div class="card-img-overlay">
+          <h3 className="centered">Roly Controly</h3>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </Link>
+  </div>
+
+  <div class="col">
+    <Link to="/projects-floodedfox">
+      <motion.div class="card shadow-sm" whileHover={{ scale: 1.1 }}>
+        <img src={FFThumb} alt=""/>
+        <div class="card-img-overlay">
+          <h3 className="centered">Flooded Fox</h3>
+        </div>
+      </motion.div>
+    </Link>
+  </div>
+
+  <div class="col">
+    <Link to="/projects-carbattle">
+      <motion.div class="card shadow-sm" whileHover={{ scale: 1.1 }}>
+        <img src={CGThumb} alt=""/>
+        <div class="card-img-overlay" >
+          <h3 className="centered">Car Battle</h3>
+        </div>
+      </motion.div>
+    </Link>
   </div>
   
   <div class="col">
-    <div class="card shadow-sm" style={{backgroundColor: "#AEC3AE"}}>
-    <img src={RRThumb} alt=""/>
-      <div class="card-body" >
-      <h3 className="centered">Reckless Rubber</h3>
-        <p class="card-text">Created a game using Unity for a game jam with the theme "10 Seconds". The player must prepare thier car and then race around the track and hit each checkpoint within 10 seconds.</p>
-        <div class="d-flex justify-content-center align-items-center">
-          <div class="btn-group">
-          <Link to="/projects-recklessrubber">
-            <button type="button" class="btn btn-dark">View</button>
-            </Link>
-          </div>
+    <Link to="/projects-recklessrubber">
+      <motion.div class="card shadow-sm" whileHover={{ scale: 1.1 }}>
+        <img src={RRThumb} alt=""/>
+        <div class="card-img-overlay" >
+          <h3 className="centered">Reckless Rubber</h3>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </Link>
   </div>
 
   <div class="col">
-    <div class="card shadow-sm" style={{backgroundColor: "#AEC3AE"}}>
-    <img src={ARThumb} alt=""/>
-      <div class="card-body" >
-      <h3 className="centered">AR Objects App</h3>
-        <p class="card-text">Created an app with AR Core that enables the user to place diferent types of 3D furniture or items in any room they want using the camera on their phone.</p>
-        <div class="d-flex justify-content-center align-items-center">
-          <div class="btn-group">
-          <Link to="/projects-arapp">
-            <button type="button" class="btn btn-dark">View</button>
-            </Link>
-          </div>
+    <Link to="/projects-arapp">
+      <motion.div class="card shadow-sm" whileHover={{ scale: 1.1 }}>
+        <img src={ARThumb} alt=""/>
+        <div class="card-img-overlay" >
+          <h3 className="centered">AR Objects App</h3>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </Link>
   </div>
+  
 </div>
-
 </div>
 </cards>
 

@@ -10,7 +10,7 @@ return (
         <div class="container text-center">
             <div class="col-lg-10 mx-auto">
                 <h1>Cardemon</h1>
-                <iframe title="Cardemon Demo Video" width= "80%" height="400"
+                <iframe className="basicpadding" title="Cardemon Demo Video" width= "80%" height="400"
 				    src="https://www.youtube.com/embed/QwF3tM-Efs4?si=q4pkhR6e4FVadh0f">
 				</iframe>
             </div>
@@ -19,6 +19,8 @@ return (
         <div class="container text-left">
             <div class="row">
                 <div class="col-lg-10 mx-auto">
+                    <h3>Introduction</h3>
+                    <p class="lead mb-5">I am currently working on creating a turn based monster catching game that also includes classic RPG combat styles as well as farming and crafting.</p>
                     <h3>Monster Battles</h3>
                     <p class="lead mb-5">The monster battles are a turned based system with all the popular and crucial elements. Things like type effectiveness, status conditions, critical hits, and move priority are all implemented.Each move has been made with object oriented programming and can be assigned properties like power, type, VFX, and more.</p>
                     <h3>Scene Building</h3>

@@ -10,7 +10,7 @@ return (
         <div class="container text-center">
             <div class="col-lg-10 mx-auto">
                 <h1>Car Battle</h1>
-                <iframe title="Cardemon Demo Video" width= "80%" height="400"
+                <iframe className="basicpadding" title="Car Battle Demo Video" width= "80%" height="400"
 				    src="https://www.youtube.com/embed/qXkuGn6fQIs?si=iROOQAg-wNbofEeH">
 				</iframe>
             </div>
@@ -19,6 +19,8 @@ return (
         <div class="container text-left">
             <div class="row">
                 <div class="col-lg-10 mx-auto">
+                    <h3>Introduction</h3>
+                    <p class="lead mb-5">Created a car battle game with a partner using Unreal engine. There are turrets around the map that the player must defeat to win the game.</p>
                     <h3>Overview</h3>
                     <p class="lead mb-5">In class my partner and I were instructed to create a game where the player controls a car and can drive around the map that we created, trying to defeat turrets to win the game. We used the Unreal engine to create this but we were not allowed to use any preset physics. This meant we had to code everything including the physics of the car movement.</p>
                     <h3>Ramps and Terrain</h3>
