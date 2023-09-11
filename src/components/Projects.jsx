@@ -1,88 +1,43 @@
-import React from "react";
-import {motion} from "framer-motion";
-import Cardemon from "./img/CardemonThumbRounded.PNG";
-import FFThumb from "./img/FFThumbNailRounded.PNG";
-import RCThumb from "./img/RCThumbRounded.jpg";
-import CGThumb from "./img/CarGamePic.PNG";
-import RRThumb from "./img/RaceThumbnail.png";
-import ARThumb from "./img/ARBookcase2Edit.jpg";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import PortfolioEntry from "./PortfolioEntry"
+import Games from "../games"
+import Applications from "../applications"
+
+var portfolioSection = 0;
+
+function createEntry(entry){
+  return (
+    <PortfolioEntry 
+      key={entry.id}
+      title={entry.title}
+      thumbnail={entry.thumbnail}
+      link={entry.link}
+    />
+  );
+}
 
 function Projects() {
+  const[count, setCount] = useState(0);
+
+  function handleClick(id) {
+    portfolioSection = id;
+    setCount(count + 1);
+  }
+
     return (
         <cards>
-        <div>
-            <h1 className="centered">Projects</h1>
+        <div className="centered">
+            <h1>Projects</h1>
+            <div className="defaultoutlinebutton">
+              <button type="button" class="btn btn-outline-dark mx-2" onClick={() => handleClick(0)}>Games</button>
+              <button type="button" class="btn btn-outline-dark mx-2" onClick={() => handleClick(1)}>Applications</button>
+            </div>
         </div>
 <div class="container">
 
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-
-  <div class="col">
-    <Link to="/projects-cardemon">
-      <motion.div class="card shadow-sm" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
-        <img class="rounded" src={Cardemon} alt=""/>
-        <div class="card-img-overlay">
-          <h3 class="card-title">Cardemon</h3>
-        </div>
-      </motion.div>
-    </Link>
-  </div>
-
-  <div class="col">
-    <Link to="/projects-rolycontroly">
-      <motion.div class="card shadow-sm" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
-        <img class="rounded" src={RCThumb} alt=""/>
-        <div class="card-img-overlay">
-          <h3 className="centered">Roly Controly</h3>
-        </div>
-      </motion.div>
-    </Link>
-  </div>
-
-  <div class="col">
-    <Link to="/projects-floodedfox">
-      <motion.div class="card shadow-sm" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
-        <img src={FFThumb} alt=""/>
-        <div class="card-img-overlay">
-          <h3 className="centered">Flooded Fox</h3>
-        </div>
-      </motion.div>
-    </Link>
-  </div>
-
-  <div class="col">
-    <Link to="/projects-carbattle">
-      <motion.div class="card shadow-sm" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
-        <img src={CGThumb} alt=""/>
-        <div class="card-img-overlay" >
-          <h3 className="centered">Car Battle</h3>
-        </div>
-      </motion.div>
-    </Link>
-  </div>
-  
-  <div class="col">
-    <Link to="/projects-recklessrubber">
-      <motion.div class="card shadow-sm" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
-        <img src={RRThumb} alt=""/>
-        <div class="card-img-overlay" >
-          <h3 className="centered">Reckless Rubber</h3>
-        </div>
-      </motion.div>
-    </Link>
-  </div>
-
-  <div class="col">
-    <Link to="/projects-arapp">
-      <motion.div class="card shadow-sm" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
-        <img src={ARThumb} alt=""/>
-        <div class="card-img-overlay" >
-          <h3 className="centered">AR Objects App</h3>
-        </div>
-      </motion.div>
-    </Link>
-  </div>
+{portfolioSection === 0 && Games.map(createEntry)}
+{portfolioSection === 1 && Applications.map(createEntry)}
   
 </div>
 </div>
