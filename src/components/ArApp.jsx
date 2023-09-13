@@ -10,7 +10,7 @@ return (
         <div class="container text-center">
             <div class="col-lg-10 mx-auto">
                 <h1>Ar App</h1>
-                <iframe className="basicpadding" title="Cardemon Demo Video" width= "80%" height="400"
+                <iframe className="basicpadding" title="Ar Demo Video" width= "80%" height="400"
 				    src="https://www.youtube.com/embed/Mx3-D-eny1k?si=9XiCedWl_5CSTVv0">
 				</iframe>
             </div>
