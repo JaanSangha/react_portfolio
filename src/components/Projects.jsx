@@ -21,6 +21,7 @@ function Projects() {
 
   function handleClick(id) {
     portfolioSection = id;
+    
     setCount(count + 1);
   }
 
@@ -29,8 +30,10 @@ function Projects() {
         <div className="centered">
             <h1>Projects</h1>
             <div className="defaultoutlinebutton">
-              <button type="button" class="btn btn-outline-dark mx-2" onClick={() => handleClick(0)}>Games</button>
-              <button type="button" class="btn btn-outline-dark mx-2" onClick={() => handleClick(1)}>Applications</button>
+              {portfolioSection ===0 && <button type="button" class="btn btn-outline-dark mx-2 active" onClick={() => handleClick(0)}>Games</button>}
+              {portfolioSection ===0 &&<button type="button" class="btn btn-outline-dark mx-2" onClick={() => handleClick(1)}>Applications</button>}
+              {portfolioSection ===1 && <button type="button" class="btn btn-outline-dark mx-2" onClick={() => handleClick(0)}>Games</button>}
+              {portfolioSection ===1 &&<button type="button" class="btn btn-outline-dark mx-2 active" onClick={() => handleClick(1)}>Applications</button>}
             </div>
         </div>
 <div class="container">
