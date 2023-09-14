@@ -4,8 +4,14 @@
     box-sizing: border-box;
   }
 
+  html {
+    font-family: "Lexend Deca", sans-serif;
+    scroll-behavior: smooth;
+    scroll-padding-top: 30px;
+  }
+  
 header {
-    background-image: url(GreenBG.jpg);
+    background-image: url(GreenBG2.jpg);
     background-size: cover ;
     margin: auto -16px;
     padding: 16px;
@@ -39,6 +45,7 @@ h2{
 
 body {
     background: #94A684;
+    background: linear-gradient(#94A684, #AEC3AE, #E4E4D0, #FFEEF4);
     padding: 0 16px;
   }
 
