@@ -4,7 +4,6 @@ import Header from "./BigHeader";
 import About from "./About";
 import Footer from "./Footer";
 import Projects from "./Projects";
-import Resume from "./Resume"
 
 function Home() {
 
