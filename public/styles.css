@@ -5,7 +5,6 @@
   }
 
   html {
-    font-family: "Lexend Deca", sans-serif;
     scroll-behavior: smooth;
     scroll-padding-top: 30px;
   }
@@ -19,10 +18,20 @@ header {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
 
+.fullbody {
+    padding: 0px !important;
+}
 header h1 {
-    padding-top: 16px;
-    font-size: 4rem;
+    font-size: 5rem;
     text-align: center;
+}
+
+header h2 {
+    text-align: center;
+}
+header img {
+    width: 350px;
+    height: 350px;
 }
 
 .headersmall {
@@ -30,9 +39,20 @@ header h1 {
     margin: auto -16px;
 
 }
+.toppadding {
+margin-top: 5vh;
+}
+
+nav .navbar-nav li a{
+    color: white !important;
+    }
 
 .centered {
     text-align: center;
+}
+
+.rightalign {
+    text-align: right;
 }
 
 .resume {
@@ -56,6 +76,7 @@ cards {
     padding: 32px;
 }
 
+
 footer {
     background-color: #FFEEF4;
     text-align: center;
@@ -77,6 +98,10 @@ footer {
 
 .defaultoutlinebutton {
     padding: 16px;
+}
+
+#aboutpic {
+    max-width: 380px;
 }
 
 .dictionary {

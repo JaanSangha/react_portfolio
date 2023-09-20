@@ -1,17 +1,25 @@
 import React from "react";
-import MePic from "./img/Me.png"
+import MePic from "./img/grad.jpg"
 
 function BigHeader() {
     return (
-         <header class="p-5 text-center bg-body-tertiary">
-            <div class="container py-5">
-            <img class="rounded-circle shadow-4-strong" alt="avatar2" src={MePic} />
-                <h1>Jaan Sangha</h1>
-                <h2 class="col-lg-8 mx-auto lead">
-                    Game Programmer / Full Stack Developer
-                </h2>
-            </div>  
-        </header>  
+        <div className="toppadding">
+            <header class="p-5">
+                <div class="container py-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-5 col-lg-5 col-md-6 text-center">
+                                <img class="rounded-circle shadow-4-strong" alt="avatar2" src={MePic} />
+                            </div>
+                            <div class="col-xl-7 col-lg-7 col-md-6 my-auto">
+                                <h1 class="text-md-start">Jaan Sangha</h1>
+                                <h2 class="text-md-start">Game Programmer / Full Stack Developer</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </header>     
+        </div>
     );
 }
 
