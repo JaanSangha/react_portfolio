@@ -5,11 +5,10 @@ import MePic from "./img/grad.jpg"
 function BigHeader() {
     return (
         <div className="toppadding">
-            <header class="p-5">
-                <div class="container py-5">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xl-5 col-lg-5 col-md-6 text-center">
+            <header class="row">
+
+       
+                            <div class="col-xl-5 col-lg-5 col-md-6 text-center my-auto">
                                 <motion.img 
                                 class="rounded-circle shadow-4-strong" alt="avatar2" src={MePic}
                                 initial={{ y: -1000 }}
@@ -29,9 +28,8 @@ function BigHeader() {
                                 </motion.div>
                             </div>
                             
-                        </div>
-                    </div>
-                </div>  
+
+
             </header>     
         </div>
     );

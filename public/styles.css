@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Lexend Deca';font-size: 17px;
   }
 
   html {
@@ -12,12 +13,17 @@
 header {
     background-image: url(GreenBG2.jpg);
     background-size: cover ;
+    height: 100vh;
     margin: auto -16px;
     padding: 16px;
 
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
 
+.headerdiv {
+    margin:0 auto;
+    width: 95%
+}
 .fullbody {
     padding: 0px !important;
 }
@@ -28,10 +34,12 @@ header h1 {
 
 header h2 {
     text-align: center;
+    font-size: 2rem;
+
 }
 header img {
-    width: 340px;
-    height: 340px;
+    width: 375px;
+    height: 375px;
 }
 
 .headersmall {
@@ -40,7 +48,7 @@ header img {
 
 }
 .toppadding {
-margin-top: 5vh;
+margin-top: 35px;
 }
 
 nav .navbar-nav li a{
@@ -76,6 +84,14 @@ cards {
     padding: 32px;
 }
 
+.banner {
+    background-color: #94A684;
+    text-align: center;
+    margin: auto -16px;
+    padding: 32px;
+    bottom: 0;
+    height: 2.5rem;
+}
 
 footer {
     background-color: #FFEEF4;
