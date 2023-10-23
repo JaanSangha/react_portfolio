@@ -17,7 +17,7 @@ function Navbar(props) {
           <a class="nav-link" aria-current="page" href={props.portfolioId}>Portfolio</a>
         </li> */}
         <li class="nav-item px-2">
-          <a class="nav-link" aria-current="page" href="https://drive.google.com/file/d/1B71TLalJ4oKROjWo9nPPdBeey4HIDmGC/view?usp=sharing" target="_blank" rel="noopener noreferrer">CV</a>
+          <a class="nav-link" aria-current="page" href="https://drive.google.com/file/d/1B71TLalJ4oKROjWo9nPPdBeey4HIDmGC/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a>
         </li>
       </ul>
     </div>

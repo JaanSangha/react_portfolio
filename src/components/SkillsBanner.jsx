@@ -3,7 +3,7 @@ import React from "react";
 function SkillsBanner() {
     return (
       <div className="banner">
-      <p>Copywrite ⓒ Jaan Sangha</p>
+      <p>JavaScript     React     Node      MongoDB     HTML      CSS     Git     Unity     C#</p>
       </div>
     );
 }
