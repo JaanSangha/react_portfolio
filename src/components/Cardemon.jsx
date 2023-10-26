@@ -20,7 +20,7 @@ return (
             <div class="row">
                 <div class="col-lg-10 mx-auto">
                     <h3>Introduction</h3>
-                    <p class="lead mb-5">I am currently working on creating a turn based monster catching game that also includes classic RPG combat styles as well as farming and crafting.</p>
+                    <p class="lead mb-5">I am currently working on creating a turn based monster catching game that also includes classic RPG combat styles as well as farming and crafting. This game is being created using Unity 3D and C#.</p>
                     <h3>Monster Battles</h3>
                     <p class="lead mb-5">The monster battles are a turned based system with all the popular and crucial elements. Things like type effectiveness, status conditions, critical hits, and move priority are all implemented.Each move has been made with object oriented programming and can be assigned properties like power, type, VFX, and more.</p>
                     <h3>Scene Building</h3>

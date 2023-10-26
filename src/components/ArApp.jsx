@@ -20,7 +20,7 @@ return (
             <div class="row">
                 <div class="col-lg-10 mx-auto">
                     <h3>Introduction</h3>
-                    <p class="lead mb-5">Created an app with AR Core that enables the user to place diferent types of 3D furniture or items in any room they want using the camera on their phone.</p>
+                    <p class="lead mb-5">Created an app with AR Core that enables the user to place diferent types of 3D furniture or items in any room they want using the camera on their phone. I created this application with Android Studio.</p>
                     <h3>AR Core</h3>
                     <p class="lead mb-5">By implementing AR Core into my app it can identify walls and floors. It also keeps track of where you place items so you can look around and when you look back it will be in the same spot relative to the real world. Using Android Studio I needed to add it into the project and implement it, then it was ready to be used by the program.</p>
                     <h3>Placeable Objects</h3>

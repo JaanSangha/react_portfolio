@@ -20,7 +20,7 @@ return (
             <div class="row">
                 <div class="col-lg-10 mx-auto">
                     <h3>Introduction</h3>
-                    <p class="lead mb-5">I am currently working on creating a mobile game focused on tilt-controls. This game is expected to release this fall on the Play Store.</p>
+                    <p class="lead mb-5">I am currently working on creating a mobile game focused on tilt-controls. This game is expected to release this fall on the Play Store. This game is being created using Unity 3D and C#.</p>
                     <h3>Endless Level Possibilities</h3>
                     <p class="lead mb-5">I have tried to keep the player mechanics basic so anyone can pick it up and play while also allowing to make many different level combinations. The main control feature is used by tilting your device and there is only 1 tap needed to perform jumps. With these mechanics I plan to make a bunch of complicated levels that the player can explore and will be challenging to beat. The video shown is displaying some basic levels so the player can get a hang of the controls.</p>
                     <h3>Interactive Level Select</h3>
