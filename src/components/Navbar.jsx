@@ -3,7 +3,7 @@ import Logo from "./img/j.png";
 
 function Navbar(props) {
     return (
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top px-2">
     <div class="container-fluid">
       <a class="navbar-brand px-4" href="#top"><img src={Logo} alt="The Letter J" width="40" height="40"/></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">

@@ -51,6 +51,10 @@ header img {
 margin-top: 35px;
 }
 
+nav{
+    background-color: rgb(62, 61, 61);
+}
+
 nav .navbar-nav li a{
     color: white !important;
     font-size: large;
