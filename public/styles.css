@@ -94,18 +94,18 @@ cards {
     height: 2.5rem;
 }
 
-footer {
+.footer {
     background-color: #FFEEF4;
     text-align: center;
-    margin: auto -16px;
-    padding: 32px;
-    bottom: 0;
-    height: 2.5rem;
   }
   
-  footer p {
+.footer p {
     color: #ccc;
-  }
+}
+
+.footerText{
+    font-size: 1.4rem;
+}
 
 .card-img-overlay h3 {
     text-align: center;
