@@ -13,6 +13,7 @@
 header {
     background-image: url(GreenBG2.jpg);
     background-size: cover ;
+    background-position: 80%;
     height: 100vh;
     margin: auto -16px;
     padding: 16px;
