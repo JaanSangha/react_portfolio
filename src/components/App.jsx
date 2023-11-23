@@ -7,6 +7,7 @@ import CarBattle from "./CarBattle";
 import RecklessRubber from "./RecklessRubber"
 import ArApp from "./ArApp";
 import NotesApp from "./NotesApp"
+import Petstagram from "./Petstagram";
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import ScrollToTop from './ScrollToTop';
 
@@ -25,6 +26,7 @@ return (
                 <Route exact path="/projects-recklessrubber" element={<RecklessRubber />} />
                 <Route exact path="/projects-arapp" element={<ArApp />} />
                 <Route exact path="/projects-notesapp" element={<NotesApp />} />
+                <Route exact path="/projects-petstagram" element={<Petstagram />} />
             </Routes>
         </Router>
     </div>
