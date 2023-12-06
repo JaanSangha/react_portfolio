@@ -1,51 +1,48 @@
-import React from "react";
+import React from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 
 function Contact() {
+	const [state, handleSubmit] = useForm("xayggjkn");
+  if (state.succeeded) {
+      return <p>Thanks for getting in contact!</p>;
+  }
+
     return (
-        <div>
-            <div class="contact1">
-		<div class="container-contact1">
-			<div class="contact1-pic js-tilt" data-tilt>
-				<img src="RRThumb" alt="IMG" />
+			<div class="container py-5">
+				<div class="col-md-8 m-auto">
+					<div class="p-5 bg-body-tertiary border rounded-3">
+					<h2>Add borders</h2>
+					<p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
+					<form onSubmit={handleSubmit}>
+						<label htmlFor="email">
+							Email Address
+						</label>
+						<input
+							id="email"
+							type="email" 
+							name="email"
+						/>
+						<ValidationError 
+							prefix="Email" 
+							field="email"
+							errors={state.errors}
+						/>
+						<textarea
+							id="message"
+							name="message"
+						/>
+						<ValidationError 
+							prefix="Message" 
+							field="message"
+							errors={state.errors}
+						/>
+						<button type="submit" disabled={state.submitting}>
+							Submit
+						</button>
+					</form>
+					</div>
+				</div>
 			</div>
-
-			<form class="contact1-form validate-form">
-				<span class="contact1-form-title">
-					Get in touch
-				</span>
-
-				<div class="wrap-input1 validate-input" data-validate = "Name is required">
-					<input class="input1" type="text" name="name" placeholder="Name" />
-					<span class="shadow-input1"></span>
-				</div>
-
-				<div class="wrap-input1 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-					<input class="input1" type="text" name="email" placeholder="Email" />
-					<span class="shadow-input1"></span>
-				</div>
-
-				<div class="wrap-input1 validate-input" data-validate = "Subject is required">
-					<input class="input1" type="text" name="subject" placeholder="Subject" />
-					<span class="shadow-input1"></span>
-				</div>
-
-				<div class="wrap-input1 validate-input" data-validate = "Message is required">
-					<textarea class="input1" name="message" placeholder="Message"></textarea>
-					<span class="shadow-input1"></span>
-				</div>
-
-				<div class="container-contact1-form-btn">
-					<button class="contact1-form-btn">
-						<span>
-							Send Email
-							<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-						</span>
-					</button>
-				</div>
-			</form>
-		</div>
-	</div>
-        </div>
     );
 
 }

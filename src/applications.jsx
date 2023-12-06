@@ -1,6 +1,7 @@
 import ARThumb from "./components/img/ARBookcase2Edit.jpg"
 import NAThumb from "./components/img/NAThumb.png"
 import PGThumb from "./components/img/PgThumb.png"
+import DFThumb from "./components/img/dogfactsTN.png"
 
 const applications = [
 {
@@ -20,6 +21,12 @@ const applications = [
     title: "Petstagram",
     thumbnail: PGThumb,
     link: "/projects-petstagram"
+},
+{
+    id: 4,
+    title: "Twitter API Bots",
+    thumbnail: DFThumb,
+    link: "/projects-twitterapibots"
 }
 ]
 
