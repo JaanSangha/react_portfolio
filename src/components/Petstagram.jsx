@@ -9,7 +9,7 @@ return (
     <SmallHeader name="Petstagram" />
         <div class="container text-center">
             <div class="col-lg-10 mx-auto">
-                <h1>Petstagram</h1>
+                <h1>Petsgram</h1>
                 <iframe className="basicpadding" title="Ar Demo Video" width= "80%" height="400"
 				    src="https://www.youtube.com/embed/scTLfKa0E7g?si=UpidgwJ9yDsnK2Se">
 				</iframe>

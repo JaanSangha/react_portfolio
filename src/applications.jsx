@@ -18,7 +18,7 @@ const applications = [
 },
 {
     id: 3,
-    title: "Petstagram",
+    title: "Petsgram",
     thumbnail: PGThumb,
     link: "/projects-petstagram"
 },
