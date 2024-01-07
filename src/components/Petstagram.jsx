@@ -6,7 +6,7 @@ function Petstagram() {
 
 return (
     <div>
-    <SmallHeader name="Petstagram" />
+    <SmallHeader name="Petsgram" />
         <div class="container text-center">
             <div class="col-lg-10 mx-auto">
                 <h1>Petsgram</h1>
