@@ -4,7 +4,6 @@ import MePic from "./img/grad.jpg"
 
 function BigHeader() {
     return (
-        <div className="toppadding">
             <header class="row">
 
        
@@ -18,7 +17,7 @@ function BigHeader() {
                             </div>
 
                             
-                            <div class="col-xl-7 col-lg-7 col-md-6 my-auto">
+                            <div className="header-text" class="col-xl-7 col-lg-7 col-md-6 my-auto">
                             <motion.div
                             initial={{ y: 1000 }}
                                 animate={{ y: 0 }}
@@ -31,7 +30,6 @@ function BigHeader() {
 
 
             </header>     
-        </div>
     );
 }
 
