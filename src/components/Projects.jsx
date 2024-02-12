@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import PortfolioEntry from "./PortfolioEntry"
 import Games from "../games"
 import Applications from "../applications"
+import Websites from "../websites";
 
 var portfolioSection = 0;
 
@@ -32,8 +33,15 @@ function Projects() {
             <div className="defaultoutlinebutton">
               {portfolioSection ===0 && <button type="button" class="btn btn-outline-dark mx-2 active" onClick={() => handleClick(0)}>Games</button>}
               {portfolioSection ===0 &&<button type="button" class="btn btn-outline-dark mx-2" onClick={() => handleClick(1)}>Applications</button>}
+              {portfolioSection ===0 &&<button type="button" class="btn btn-outline-dark mx-2" onClick={() => handleClick(2)}>Websites</button>}
+
               {portfolioSection ===1 && <button type="button" class="btn btn-outline-dark mx-2" onClick={() => handleClick(0)}>Games</button>}
               {portfolioSection ===1 &&<button type="button" class="btn btn-outline-dark mx-2 active" onClick={() => handleClick(1)}>Applications</button>}
+              {portfolioSection ===1 &&<button type="button" class="btn btn-outline-dark mx-2" onClick={() => handleClick(2)}>Websites</button>}
+
+              {portfolioSection ===2 && <button type="button" class="btn btn-outline-dark mx-2" onClick={() => handleClick(0)}>Games</button>}
+              {portfolioSection ===2 &&<button type="button" class="btn btn-outline-dark mx-2" onClick={() => handleClick(1)}>Applications</button>}
+              {portfolioSection ===2 &&<button type="button" class="btn btn-outline-dark mx-2 active" onClick={() => handleClick(2)}>Websites</button>}
             </div>
         </div>
 <div class="container">
@@ -41,6 +49,7 @@ function Projects() {
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
 {portfolioSection === 0 && Games.map(createEntry)}
 {portfolioSection === 1 && Applications.map(createEntry)}
+{portfolioSection === 2 && Websites.map(createEntry)}
   
 </div>
 </div>
