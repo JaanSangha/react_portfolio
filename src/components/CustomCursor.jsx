@@ -1,8 +1,6 @@
 import { Component } from 'react';
-import MouseImg from "./img/woodmouse.png";
-import HoverMouseImg1 from "./img/woodmousehover.png";
-import MouseImg2 from "./img/woodmouse.png";
-import HoverMouseImg2 from "./img/woodmousehover.png";
+import MouseImg from "./img/legomouse.png";
+import HoverMouseImg1 from "./img/legomousehover.png";
 
 class CustomCursor extends Component {
   constructor(props) {
@@ -55,11 +53,13 @@ class CustomCursor extends Component {
 
   // Event handler for mouse enter
   handleMouseEnter = () => {
+    this.customCursor.style.display = 'none';
     this.hoverCursor1.style.display = 'block';
   }
 
   // Event handler for mouse leave
   handleMouseLeave = () => {
+    this.customCursor.style.display = 'block';
     this.hoverCursor1.style.display = 'none';
   }
 
