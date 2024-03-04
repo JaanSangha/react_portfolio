@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "./Footer";
 import SmallHeader from "./SmallHeader";
+import CustomCursor from './CustomCursor';
 
 function Cardemon() {
 
@@ -30,6 +31,7 @@ return (
         </div>
 
         <Footer />
+        <CustomCursor />
     </div>
     );
 

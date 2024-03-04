@@ -4,6 +4,7 @@ import Header from "./BigHeader";
 import About from "./About";
 import Footer from "./Footer";
 import Projects from "./Projects";
+import CustomCursor from './CustomCursor';
 
 function Home() {
 
@@ -14,6 +15,7 @@ return (
         <Projects id="projects" />
         <About />
         <Footer />
+        <CustomCursor />
     </div>
     );
 

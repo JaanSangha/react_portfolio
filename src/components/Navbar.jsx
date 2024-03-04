@@ -29,7 +29,7 @@ function Navbar(props) {
     >
       <div className="container-fluid">
         <a className="navbar-brand px-4" href="#top">
-          <img src={Logo} alt="The Letter J" width="40" height="40" />
+          <img src={Logo} alt="The Letter J" width="40" height="40" data-custom-cursor/>
         </a>
         <button
           className="navbar-toggler"
@@ -51,6 +51,7 @@ function Navbar(props) {
                 href="https://drive.google.com/file/d/12tgabqlTc7YH3Qx5xWludbXgj1ayWUmq/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
+                data-custom-cursor
               >
                 Resume
               </a>

@@ -5,6 +5,14 @@
     font-family: 'Lexend Deca';font-size: 17px;
   }
 
+  a, a:hover {
+    cursor: none !important;
+  }
+
+  button {
+    cursor: none !important;
+  }
+
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 30px;
