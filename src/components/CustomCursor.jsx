@@ -1,14 +1,31 @@
 import { Component } from 'react';
 import MouseImg from "./img/legomouse.png";
 import HoverMouseImg1 from "./img/legomousehover.png";
+import MouseImg2 from "./img/woodmouse.png";
+import HoverMouseImg2 from "./img/woodmousehover.png";
+import MouseImg3 from "./img/cheesemouse.png";
+import HoverMouseImg3 from "./img/cheesemousehover.png";
 
 class CustomCursor extends Component {
   constructor(props) {
     super(props);
+    let randomNumber = Math.floor(Math.random() * (2 - 0 + 1)) + 0;
+
     this.customCursor = new Image();
     this.hoverCursor1 = new Image();
+    if(randomNumber === 0){
     this.customCursor.src = MouseImg;
     this.hoverCursor1.src = HoverMouseImg1;
+    }
+    else if (randomNumber ===1 ){
+      this.customCursor.src = MouseImg2;
+      this.hoverCursor1.src = HoverMouseImg2;
+    }
+    else if(randomNumber ===2)
+    {
+      this.customCursor.src = MouseImg3;
+      this.hoverCursor1.src = HoverMouseImg3;
+    }
     this.customCursor.style.position = 'fixed';
     this.customCursor.style.pointerEvents = 'none';
     this.customCursor.style.width = '32px'; // Set the width of the custom cursor
