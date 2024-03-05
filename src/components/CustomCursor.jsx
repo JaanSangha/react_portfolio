@@ -1,8 +1,8 @@
 import { Component } from 'react';
 import MouseImg from "./img/legomouse.png";
 import HoverMouseImg1 from "./img/legomousehover.png";
-import MouseImg2 from "./img/woodmouse.png";
-import HoverMouseImg2 from "./img/woodmousehover.png";
+import MouseImg2 from "./img/woodmousehover.png";
+import HoverMouseImg2 from "./img/woodmouse.png";
 import MouseImg3 from "./img/cheesemouse.png";
 import HoverMouseImg3 from "./img/cheesemousehover.png";
 
