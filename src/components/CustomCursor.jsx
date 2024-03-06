@@ -5,11 +5,17 @@ import MouseImg2 from "./img/woodmousehover.png";
 import HoverMouseImg2 from "./img/woodmouse.png";
 import MouseImg3 from "./img/cheesemouse.png";
 import HoverMouseImg3 from "./img/cheesemousehover.png";
+import MouseImg4 from "./img/yinyangmouse.png";
+import HoverMouseImg4 from "./img/yinyangmousehover.png";
+import MouseImg5 from "./img/cloudmouse.png";
+import HoverMouseImg5 from "./img/cloudmousehover.png";
+import MouseImg6 from "./img/chocolatemouse.png";
+import HoverMouseImg6 from "./img/chocolatemousehover.png";
 
 class CustomCursor extends Component {
   constructor(props) {
     super(props);
-    let randomNumber = Math.floor(Math.random() * (2 - 0 + 1)) + 0;
+    let randomNumber = Math.floor(Math.random() * (5 - 0 + 1)) + 0;
 
     this.customCursor = new Image();
     this.hoverCursor1 = new Image();
@@ -26,15 +32,30 @@ class CustomCursor extends Component {
       this.customCursor.src = MouseImg3;
       this.hoverCursor1.src = HoverMouseImg3;
     }
+    else if(randomNumber ===3)
+    {
+      this.customCursor.src = MouseImg4;
+      this.hoverCursor1.src = HoverMouseImg4;
+    }
+    else if(randomNumber ===4)
+    {
+      this.customCursor.src = MouseImg5;
+      this.hoverCursor1.src = HoverMouseImg5;
+    }
+    else if(randomNumber ===5)
+    {
+      this.customCursor.src = MouseImg6;
+      this.hoverCursor1.src = HoverMouseImg6;
+    }
     this.customCursor.style.position = 'fixed';
     this.customCursor.style.pointerEvents = 'none';
-    this.customCursor.style.width = '32px'; // Set the width of the custom cursor
-    this.customCursor.style.height = '32px'; // Set the height of the custom cursor
+    this.customCursor.style.width = '28px'; // Set the width of the custom cursor
+    this.customCursor.style.height = '28px'; // Set the height of the custom cursor
     this.customCursor.style.zIndex = '9999'; // Set z-index to ensure it appears above other elements
     this.hoverCursor1.style.position = 'fixed';
     this.hoverCursor1.style.pointerEvents = 'none';
-    this.hoverCursor1.style.width = '32px'; // Set the width of the hover cursor
-    this.hoverCursor1.style.height = '32px'; // Set the height of the hover cursor
+    this.hoverCursor1.style.width = '28px'; // Set the width of the hover cursor
+    this.hoverCursor1.style.height = '28px'; // Set the height of the hover cursor
     this.hoverCursor1.style.zIndex = '9999'; // Set z-index to ensure it appears above other elements
     this.hoverCursor1.style.display = 'none'; // Initially hide the hover cursor
   }
