@@ -1,5 +1,7 @@
 import RSThumb from "./components/img/annaThumbedit.png"
 import SFThumb from "./components/img/simayathumb.png"
+import SBThumb from "./components/img/sanghabrosthumb.jpg"
+
 
 const websites = [
 {
@@ -13,6 +15,12 @@ const websites = [
     title: "Simaya Foundation",
     thumbnail: SFThumb,
     link: "https://simayafoundation.org/"
+},
+{
+    id: 3,
+    title: "Sangha Brothers",
+    thumbnail: SBThumb,
+    link: "https://sanghabrothers.com/"
 },
 ]
 
