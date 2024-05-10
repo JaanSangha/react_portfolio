@@ -171,7 +171,16 @@ cards {
     align-items: center;
     width: 25%;
   }
-
+ .comicstrip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5vh;
+    padding-bottom: 8vh;
+ }
+ #comicimg {
+    max-width: 80%;
+ }
   /* Extra Small Devices (Phones) */
 @media screen and (max-width: 575.98px) {
     /* Styles for extra small devices (phones) */
@@ -191,6 +200,9 @@ cards {
         padding-bottom: 5vh;
     }
     
+    #comicimg {
+        max-width: 90%;
+     }
     
   }
   
@@ -217,5 +229,8 @@ cards {
   /* Extra Large Devices (Extra Large Desktops) */
   @media screen and (min-width: 1200px) {
     /* Styles for extra large devices (extra large desktops) */
+    #comicimg {
+        max-width: 70%;
+     }
   }
   
