@@ -58,7 +58,7 @@ header img {
 .headersmall {
     background-color: #AEC3AE;
     margin: auto -16px;
-
+    color: white;
 }
 .toppadding {
 margin-top: 35px;
@@ -82,6 +82,11 @@ nav .navbar-nav li a{
     font-size: large;
     }
 
+.smallnav {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    margin-bottom: 3vh;
+}
 .centered {
     text-align: center;
 }
