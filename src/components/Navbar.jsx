@@ -48,7 +48,7 @@ function Navbar(props) {
               <a
                 className="nav-link"
                 aria-current="page"
-                href="https://drive.google.com/file/d/1lomHyh0YdDq-agguoIkI6t9Fo1NCVH_0/view?usp=sharing"
+                href="https://drive.google.com/file/d/147E3q8wPDad45lwNeqZE5vz-LOYZ_IvC/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-custom-cursor
