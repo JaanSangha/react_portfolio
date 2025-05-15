@@ -9,6 +9,7 @@ import ArApp from "./ArApp";
 import NotesApp from "./NotesApp"
 import Petstagram from "./Petstagram";
 import TwitterAPIBots from "./TwitterAPIBots";
+import ResumeGenie from "./ResumeGenie";
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import ScrollToTop from './ScrollToTop';
 
@@ -29,6 +30,7 @@ return (
                 <Route exact path="/projects-notesapp" element={<NotesApp />} />
                 <Route exact path="/projects-petstagram" element={<Petstagram />} />
                 <Route exact path="/projects-twitterapibots" element={<TwitterAPIBots />} />
+                <Route exact path="/projects-resumegenie" element={<ResumeGenie />} />
             </Routes>
         </Router>
     </div>

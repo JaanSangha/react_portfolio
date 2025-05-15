@@ -1,8 +1,8 @@
 import { Component } from 'react';
 import MouseImg from "./img/legomouse.png";
 import HoverMouseImg1 from "./img/legomousehover.png";
-import MouseImg2 from "./img/woodmousehover.png";
-import HoverMouseImg2 from "./img/woodmouse.png";
+import MouseImg2 from "./img/woodmouse.png";
+import HoverMouseImg2 from "./img/woodmousehover.png";
 import MouseImg3 from "./img/cheesemouse.png";
 import HoverMouseImg3 from "./img/cheesemousehover.png";
 import MouseImg4 from "./img/yinyangmouse.png";
@@ -20,52 +20,48 @@ const isMobileDevice = () => {
 class CustomCursor extends Component {
   constructor(props) {
     super(props);
-    let randomNumber = Math.floor(Math.random() * (5 - 0 + 1)) + 0;
+    let randomNumber = Math.floor(Math.random() * 6);
 
     this.customCursor = new Image();
     this.hoverCursor1 = new Image();
-    if (randomNumber === 0) {
-      this.customCursor.src = MouseImg;
-      this.hoverCursor1.src = HoverMouseImg1;
-    } else if (randomNumber === 1) {
-      this.customCursor.src = MouseImg2;
-      this.hoverCursor1.src = HoverMouseImg2;
-    } else if (randomNumber === 2) {
-      this.customCursor.src = MouseImg3;
-      this.hoverCursor1.src = HoverMouseImg3;
-    } else if (randomNumber === 3) {
-      this.customCursor.src = MouseImg4;
-      this.hoverCursor1.src = HoverMouseImg4;
-    } else if (randomNumber === 4) {
-      this.customCursor.src = MouseImg5;
-      this.hoverCursor1.src = HoverMouseImg5;
-    } else if (randomNumber === 5) {
-      this.customCursor.src = MouseImg6;
-      this.hoverCursor1.src = HoverMouseImg6;
-    }
-    this.customCursor.style.position = 'fixed';
-    this.customCursor.style.pointerEvents = 'none';
-    this.customCursor.style.width = '28px'; // Set the width of the custom cursor
-    this.customCursor.style.height = '28px'; // Set the height of the custom cursor
-    this.customCursor.style.zIndex = '9999'; // Set z-index to ensure it appears above other elements
-    this.hoverCursor1.style.position = 'fixed';
-    this.hoverCursor1.style.pointerEvents = 'none';
-    this.hoverCursor1.style.width = '28px'; // Set the width of the hover cursor
-    this.hoverCursor1.style.height = '28px'; // Set the height of the hover cursor
-    this.hoverCursor1.style.zIndex = '9999'; // Set z-index to ensure it appears above other elements
-    this.hoverCursor1.style.display = 'none'; // Initially hide the hover cursor
+
+    const cursorSets = [
+      [MouseImg, HoverMouseImg1],
+      [MouseImg2, HoverMouseImg2],
+      [MouseImg3, HoverMouseImg3],
+      [MouseImg4, HoverMouseImg4],
+      [MouseImg5, HoverMouseImg5],
+      [MouseImg6, HoverMouseImg6]
+    ];
+
+    this.customCursor.src = cursorSets[randomNumber][0];
+    this.hoverCursor1.src = cursorSets[randomNumber][1];
+
+    [this.customCursor, this.hoverCursor1].forEach(cursor => {
+      cursor.style.position = 'fixed';
+      cursor.style.pointerEvents = 'none';
+      cursor.style.width = '28px';
+      cursor.style.height = '28px';
+      cursor.style.zIndex = '9999';
+    });
+
+    this.hoverCursor1.style.display = 'none';
   }
 
   componentDidMount() {
     if (!isMobileDevice()) {
       document.body.appendChild(this.customCursor);
       document.body.appendChild(this.hoverCursor1);
-      document.body.style.cursor = 'none'; // Hide default cursor
+      document.body.style.cursor = 'none';
+
       document.addEventListener('mousemove', this.handleMouseMove);
-      document.querySelectorAll('[data-custom-cursor]').forEach((element) => {
-        element.addEventListener('mouseenter', this.handleMouseEnter);
-        element.addEventListener('mouseleave', this.handleMouseLeave);
+      this.updateHoverListeners();
+
+      // MutationObserver to auto-detect new elements added/removed in DOM
+      this.observer = new MutationObserver(() => {
+        this.updateHoverListeners();
       });
+      this.observer.observe(document.body, { childList: true, subtree: true });
     }
   }
 
@@ -73,36 +69,45 @@ class CustomCursor extends Component {
     if (!isMobileDevice()) {
       document.body.removeChild(this.customCursor);
       document.body.removeChild(this.hoverCursor1);
-      document.body.style.cursor = ''; // Restore default cursor
+      document.body.style.cursor = '';
+
       document.removeEventListener('mousemove', this.handleMouseMove);
-      document.querySelectorAll('[data-custom-cursor]').forEach((element) => {
-        element.removeEventListener('mouseenter', this.handleMouseEnter);
-        element.removeEventListener('mouseleave', this.handleMouseLeave);
-      });
+
+      if (this.observer) {
+        this.observer.disconnect();
+      }
     }
   }
 
   handleMouseMove = (event) => {
-    this.customCursor.style.left = `${event.clientX}px`;
-    this.customCursor.style.top = `${event.clientY}px`;
-    this.hoverCursor1.style.left = `${event.clientX}px`;
-    this.hoverCursor1.style.top = `${event.clientY}px`;
-  }
+    const { clientX, clientY } = event;
+    this.customCursor.style.left = `${clientX}px`;
+    this.customCursor.style.top = `${clientY}px`;
+    this.hoverCursor1.style.left = `${clientX}px`;
+    this.hoverCursor1.style.top = `${clientY}px`;
+  };
 
-  // Event handler for mouse enter
   handleMouseEnter = () => {
     this.customCursor.style.display = 'none';
     this.hoverCursor1.style.display = 'block';
-  }
+  };
 
-  // Event handler for mouse leave
   handleMouseLeave = () => {
     this.customCursor.style.display = 'block';
     this.hoverCursor1.style.display = 'none';
-  }
+  };
+
+  updateHoverListeners = () => {
+    document.querySelectorAll('[data-custom-cursor]').forEach((element) => {
+      element.removeEventListener('mouseenter', this.handleMouseEnter);
+      element.removeEventListener('mouseleave', this.handleMouseLeave);
+      element.addEventListener('mouseenter', this.handleMouseEnter);
+      element.addEventListener('mouseleave', this.handleMouseLeave);
+    });
+  };
 
   render() {
-    return null; // The component doesn't render any visible content
+    return null;
   }
 }
 

@@ -32,25 +32,25 @@ function Projects() {
         <div className="centered">
             <h1>Projects</h1>
             <div className="defaultoutlinebutton">
-              {portfolioSection ===0 && <button type="button" class="btn btn-outline-dark mx-2 active" onClick={() => handleClick(0)} data-custom-cursor>Games</button>}
-              {portfolioSection ===0 &&<button type="button" class="btn btn-outline-dark mx-2" onClick={() => handleClick(1)} data-custom-cursor>Applications</button>}
-              {portfolioSection ===0 &&<button type="button" class="btn btn-outline-dark mx-2" onClick={() => handleClick(2)} data-custom-cursor>Websites</button>}
+              {portfolioSection ===0 && <button type="button" class="btn btn-outline-dark mx-2 active" onClick={() => handleClick(0)} data-custom-cursor>Applications</button>}
+              {portfolioSection ===0 &&<button type="button" class="btn btn-outline-dark mx-2" onClick={() => handleClick(1)} data-custom-cursor>Websites</button>}
+              {portfolioSection ===0 &&<button type="button" class="btn btn-outline-dark mx-2" onClick={() => handleClick(2)} data-custom-cursor>Games</button>}
 
-              {portfolioSection ===1 && <button type="button" class="btn btn-outline-dark mx-2" onClick={() => handleClick(0)} data-custom-cursor>Games</button>}
-              {portfolioSection ===1 &&<button type="button" class="btn btn-outline-dark mx-2 active" onClick={() => handleClick(1)} data-custom-cursor>Applications</button>}
-              {portfolioSection ===1 &&<button type="button" class="btn btn-outline-dark mx-2" onClick={() => handleClick(2)} data-custom-cursor>Websites</button>}
+              {portfolioSection ===1 && <button type="button" class="btn btn-outline-dark mx-2" onClick={() => handleClick(0)} data-custom-cursor>Applications</button>}
+              {portfolioSection ===1 &&<button type="button" class="btn btn-outline-dark mx-2 active" onClick={() => handleClick(1)} data-custom-cursor>Websites</button>}
+              {portfolioSection ===1 &&<button type="button" class="btn btn-outline-dark mx-2" onClick={() => handleClick(2)} data-custom-cursor>Games</button>}
 
-              {portfolioSection ===2 && <button type="button" class="btn btn-outline-dark mx-2" onClick={() => handleClick(0)} data-custom-cursor>Games</button>}
-              {portfolioSection ===2 &&<button type="button" class="btn btn-outline-dark mx-2" onClick={() => handleClick(1)} data-custom-cursor>Applications</button>}
-              {portfolioSection ===2 &&<button type="button" class="btn btn-outline-dark mx-2 active" onClick={() => handleClick(2)} data-custom-cursor>Websites</button>}
+              {portfolioSection ===2 && <button type="button" class="btn btn-outline-dark mx-2" onClick={() => handleClick(0)} data-custom-cursor>Applications</button>}
+              {portfolioSection ===2 &&<button type="button" class="btn btn-outline-dark mx-2" onClick={() => handleClick(1)} data-custom-cursor>Websites</button>}
+              {portfolioSection ===2 &&<button type="button" class="btn btn-outline-dark mx-2 active" onClick={() => handleClick(2)} data-custom-cursor>Games</button>}
             </div>
         </div>
 <div class="container">
 
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-{portfolioSection === 0 && Games.map(createEntry)}
-{portfolioSection === 1 && Applications.map(createEntry)}
-{portfolioSection === 2 && Websites.map(createEntry)}
+{portfolioSection === 0 && Applications.map(createEntry)}
+{portfolioSection === 1 && Websites.map(createEntry)}
+{portfolioSection === 2 && Games.map(createEntry)}
   
 </div>
 </div>
