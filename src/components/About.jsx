@@ -13,10 +13,9 @@ function About()
                             <img id="aboutpic" class="rounded shadow-4-strong" alt="avatar2" src={MePic} />
                         </div>
                         <div class="cl-12 col-lg-6">
-                            <p class="text-md-start">Hello, my name is Jaan and I am a developer based out of Toronto, Canada. </p>
-                            <p class="text-md-start">I recently graduated from George Brown College and have been improving my skills by taking bootcamp courses and creating exciting projects. I am currently looking for a junior full stack developer position where I can learn even more. I have done some contract work for start ups and freelance work as well. </p>
-                            <p class="text-md-start">I really enjoy to create intuitive, user-friendly front end designs and clean efficient backend applications. Learning new frameworks and technoligies really excites me and I feel a great sense of accomplishment when I implement them.</p>
-                            <p class="text-md-start">When I'm not coding I really enjoy playing sports like soccer and trying new restaurants! I also love to go for hikes and enjoy the outdoors. </p>
+                            <p class="text-md-start">Hello my name is Jaan and I’m a software developer based in Toronto. I hold an advanced diploma in Game Programming from George Brown College and am currently completing my Software Engineering degree at McMaster University. Over the past few years, I’ve built a strong foundation in software development through academic projects, freelance work, and contract roles. </p>
+                            <p class="text-md-start">I have a particular interest in developing intuitive, user-friendly front-end experiences paired with clean, efficient backend systems. I enjoy working across the full stack and am always eager to expand my skill set by learning new technologies, frameworks, and tools. </p>
+                            <p class="text-md-start">Outside of coding, you’ll find me playing soccer, exploring new restaurants, or hiking through Ontario’s trails. I value work that challenges me, a team that inspires me, and projects that make a real impact.</p>
                         </div>
                     </div>
                 </div>
