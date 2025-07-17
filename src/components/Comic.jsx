@@ -43,7 +43,7 @@ function Comic() {
 
 
   return (
-    <div class="comicstrip">
+    <div className="comicstrip">
       {selectedComic ? (
         <img
           id="comicimg" 

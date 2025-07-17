@@ -5,8 +5,6 @@ import Applications from "../applications"
 import Websites from "../websites";
 import "../styles.css";
 
-var portfolioSection = 0;
-
 function createEntry(entry){
   return (
     <PortfolioEntry 
@@ -19,16 +17,14 @@ function createEntry(entry){
 }
 
 function Projects() {
-  const[count, setCount] = useState(0);
+  const [portfolioSection, setPortfolioSection] = useState(0);
 
   function handleClick(id) {
-    portfolioSection = id;
-    
-    setCount(count + 1);
+    setPortfolioSection(id);
   }
 
     return (
-        <cards>
+        <div>
         <div className="centered">
             <h1>Projects</h1>
             <div className="defaultoutlinebutton">
@@ -54,7 +50,7 @@ function Projects() {
   
 </div>
 </div>
-</cards>
+</div>
 
     );
 }
