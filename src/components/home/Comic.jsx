@@ -48,7 +48,7 @@ function Comic() {
         <img
           id="comicimg" 
           src={selectedComic} 
-          alt="Comic" 
+          alt="Random Peanuts comic strip" 
         />
       ) : (
         <p>No comic selected</p>

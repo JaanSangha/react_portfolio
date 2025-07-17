@@ -10,7 +10,7 @@ function PortfolioEntry(props) {
       <Link to={props.link}>
         {isMobile ? (
           <div className="card shadow-sm" data-custom-cursor>
-            <img className="rounded" src={props.thumbnail} alt="" />
+            <img className="rounded" src={props.thumbnail} alt={props.title + " thumbnail"} />
             <div className="card-img-overlay">
               <h3 className="card-title">{props.title}</h3>
             </div>
@@ -22,7 +22,7 @@ function PortfolioEntry(props) {
             whileTap={{ scale: 0.8 }}
             data-custom-cursor
           >
-            <img className="rounded" src={props.thumbnail} alt="" />
+            <img className="rounded" src={props.thumbnail} alt={props.title + " thumbnail"} />
             <div className="card-img-overlay">
               <h3 className="card-title">{props.title}</h3>
             </div>
