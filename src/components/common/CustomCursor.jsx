@@ -26,22 +26,23 @@ class CustomCursor extends Component {
     this.hoverCursor1 = new Image();
 
     const cursorSets = [
-      [MouseImg, HoverMouseImg1],
-      [MouseImg2, HoverMouseImg2],
-      [MouseImg3, HoverMouseImg3],
-      [MouseImg4, HoverMouseImg4],
-      [MouseImg5, HoverMouseImg5],
-      [MouseImg6, HoverMouseImg6]
+      [MouseImg, HoverMouseImg1, '#ffe066'], // yellow (cheese)
+      [MouseImg2, HoverMouseImg2, '#bfa16c'], // brown (wood)
+      [MouseImg3, HoverMouseImg3, '#ffe066'], // yellow (cheese)
+      [MouseImg4, HoverMouseImg4, '#fffbe7'], // white (yinyang)
+      [MouseImg5, HoverMouseImg5, '#aee7ff'], // blue (cloud)
+      [MouseImg6, HoverMouseImg6, '#d1a17b']  // chocolate (light brown)
     ];
 
     this.customCursor.src = cursorSets[randomNumber][0];
     this.hoverCursor1.src = cursorSets[randomNumber][1];
+    this.sparkleColor = cursorSets[randomNumber][2];
 
     [this.customCursor, this.hoverCursor1].forEach(cursor => {
       cursor.style.position = 'fixed';
       cursor.style.pointerEvents = 'none';
-      cursor.style.width = '28px';
-      cursor.style.height = '28px';
+      cursor.style.width = '22px';
+      cursor.style.height = '22px';
       cursor.style.zIndex = '9999';
     });
 
@@ -53,6 +54,8 @@ class CustomCursor extends Component {
     sparkle.className = 'sparkle-trail';
     sparkle.style.left = `${x - 6}px`;
     sparkle.style.top = `${y - 6}px`;
+    sparkle.style.background = `radial-gradient(circle, #fffbe7 60%, ${this.sparkleColor} 100%)`;
+    sparkle.style.boxShadow = `0 0 8px 2px #fffbe7, 0 0 16px 4px ${this.sparkleColor}`;
     document.body.appendChild(sparkle);
     setTimeout(() => {
       sparkle.style.opacity = '0';

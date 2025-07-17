@@ -151,6 +151,7 @@ cards {
 
 .defaultoutlinebutton {
     padding: 16px;
+    margin-bottom: 2.5rem;
 }
 
 #aboutpic {
@@ -241,8 +242,8 @@ cards {
   
 .sparkle-trail {
   position: fixed;
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background: radial-gradient(circle, #fffbe7 60%, #ffe066 100%);
   box-shadow: 0 0 8px 2px #fffbe7, 0 0 16px 4px #ffe066;
@@ -251,5 +252,66 @@ cards {
   opacity: 1;
   transform: scale(1);
   transition: opacity 0.5s, transform 0.5s;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2vw;
+  justify-items: center;
+  margin: 0 auto;
+  padding-left: 4vw;
+  padding-right: 4vw;
+}
+
+.projects-title {
+  padding-top: 2.5rem;
+  padding-bottom: 1.5rem;
+}
+
+@media (max-width: 1200px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 7vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+}
+
+.project-card {
+  width: clamp(260px, 28vw, 340px);
+  height: clamp(220px, 22vw, 280px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+
+@media (max-width: 900px) {
+  .project-card {
+    width: 90vw;
+    height: 40vw;
+    max-width: 320px;
+    min-width: 160px;
+    min-height: 120px;
+  }
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  display: block;
 }
   

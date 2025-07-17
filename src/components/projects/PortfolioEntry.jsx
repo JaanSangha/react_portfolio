@@ -9,20 +9,20 @@ function PortfolioEntry(props) {
     <div className="col">
       <Link to={props.link}>
         {isMobile ? (
-          <div className="card shadow-sm" data-custom-cursor>
-            <img className="rounded" src={props.thumbnail} alt={props.title + " thumbnail"} />
+          <div className="card shadow-sm project-card" data-custom-cursor>
+            <img className="rounded project-img" src={props.thumbnail} alt={props.title + " thumbnail"} />
             <div className="card-img-overlay">
               <h3 className="card-title">{props.title}</h3>
             </div>
           </div>
         ) : (
           <motion.div
-            className="card shadow-sm"
+            className="card shadow-sm project-card"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.8 }}
             data-custom-cursor
           >
-            <img className="rounded" src={props.thumbnail} alt={props.title + " thumbnail"} />
+            <img className="rounded project-img" src={props.thumbnail} alt={props.title + " thumbnail"} />
             <div className="card-img-overlay">
               <h3 className="card-title">{props.title}</h3>
             </div>

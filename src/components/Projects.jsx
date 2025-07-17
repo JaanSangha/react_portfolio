@@ -25,7 +25,7 @@ function Projects() {
     return (
         <div>
         <div className="centered">
-            <h1>Projects</h1>
+            <h1 className="projects-title">Projects</h1>
             <div className="defaultoutlinebutton">
               {portfolioSection ===0 && <button type="button" className="btn btn-outline-dark mx-2 active" onClick={() => handleClick(0)} data-custom-cursor>Applications</button>}
               {portfolioSection ===0 &&<button type="button" className="btn btn-outline-dark mx-2" onClick={() => handleClick(1)} data-custom-cursor>Websites</button>}
@@ -42,7 +42,7 @@ function Projects() {
         </div>
 <div className="container">
 
-<div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+<div className="projects-grid">
 {portfolioSection === 0 && Applications.map(createEntry)}
 {portfolioSection === 1 && Websites.map(createEntry)}
 {portfolioSection === 2 && Games.map(createEntry)}
