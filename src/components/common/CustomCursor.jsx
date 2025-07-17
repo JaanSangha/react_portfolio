@@ -48,6 +48,21 @@ class CustomCursor extends Component {
     this.hoverCursor1.style.display = 'none';
   }
 
+  createSparkle = (x, y) => {
+    const sparkle = document.createElement('div');
+    sparkle.className = 'sparkle-trail';
+    sparkle.style.left = `${x - 6}px`;
+    sparkle.style.top = `${y - 6}px`;
+    document.body.appendChild(sparkle);
+    setTimeout(() => {
+      sparkle.style.opacity = '0';
+      sparkle.style.transform = 'scale(0.5)';
+    }, 10);
+    setTimeout(() => {
+      if (sparkle.parentNode) sparkle.parentNode.removeChild(sparkle);
+    }, 500);
+  }
+
   componentDidMount() {
     if (!isMobileDevice()) {
       document.body.appendChild(this.customCursor);
@@ -89,6 +104,7 @@ class CustomCursor extends Component {
     this.customCursor.style.top = `${clientY}px`;
     this.hoverCursor1.style.left = `${clientX}px`;
     this.hoverCursor1.style.top = `${clientY}px`;
+    this.createSparkle(clientX, clientY);
   };
 
   handleMouseEnter = () => {
