@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import PortfolioEntry from "./PortfolioEntry"
+import PortfolioEntry from "./projects/PortfolioEntry";
 import Games from "../games"
 import Applications from "../applications"
 import Websites from "../websites";
-import "../styles.css";
 
 function createEntry(entry){
   return (

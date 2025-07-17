@@ -1,16 +1,16 @@
 import { Component } from 'react';
-import MouseImg from "./img/legomouse.png";
-import HoverMouseImg1 from "./img/legomousehover.png";
-import MouseImg2 from "./img/woodmouse.png";
-import HoverMouseImg2 from "./img/woodmousehover.png";
-import MouseImg3 from "./img/cheesemouse.png";
-import HoverMouseImg3 from "./img/cheesemousehover.png";
-import MouseImg4 from "./img/yinyangmouse.png";
-import HoverMouseImg4 from "./img/yinyangmousehover.png";
-import MouseImg5 from "./img/cloudmouse.png";
-import HoverMouseImg5 from "./img/cloudmousehover.png";
-import MouseImg6 from "./img/chocolatemouse.png";
-import HoverMouseImg6 from "./img/chocolatemousehover.png";
+import MouseImg from "../img/legomouse.png";
+import HoverMouseImg1 from "../img/legomousehover.png";
+import MouseImg2 from "../img/woodmouse.png";
+import HoverMouseImg2 from "../img/woodmousehover.png";
+import MouseImg3 from "../img/cheesemouse.png";
+import HoverMouseImg3 from "../img/cheesemousehover.png";
+import MouseImg4 from "../img/yinyangmouse.png";
+import HoverMouseImg4 from "../img/yinyangmousehover.png";
+import MouseImg5 from "../img/cloudmouse.png";
+import HoverMouseImg5 from "../img/cloudmousehover.png";
+import MouseImg6 from "../img/chocolatemouse.png";
+import HoverMouseImg6 from "../img/chocolatemousehover.png";
 
 // Utility function to detect mobile devices
 const isMobileDevice = () => {
@@ -67,8 +67,12 @@ class CustomCursor extends Component {
 
   componentWillUnmount() {
     if (!isMobileDevice()) {
-      document.body.removeChild(this.customCursor);
-      document.body.removeChild(this.hoverCursor1);
+      if (document.body.contains(this.customCursor)) {
+        document.body.removeChild(this.customCursor);
+      }
+      if (document.body.contains(this.hoverCursor1)) {
+        document.body.removeChild(this.hoverCursor1);
+      }
       document.body.style.cursor = '';
 
       document.removeEventListener('mousemove', this.handleMouseMove);

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion"
-import MePic from "./img/grad.jpg"
+import MePic from "../img/grad.jpg"
 
 function BigHeader() {
     return (

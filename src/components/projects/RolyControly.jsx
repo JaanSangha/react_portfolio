@@ -1,9 +1,9 @@
 import React from "react";
-import Footer from "./Footer";
-import SmallHeader from "./SmallHeader";
-import CustomCursor from './CustomCursor';
+import Footer from "../common/Footer";
+import SmallHeader from "../common/SmallHeader";
+import CustomCursor from '../common/CustomCursor';
 
-function Cardemon() {
+function RolyControly() {
 
 return (
     <div>
@@ -40,4 +40,4 @@ return (
 }
 
 
-export default Cardemon;
+export default RolyControly;

@@ -1,17 +1,17 @@
 import React from "react";
-import Home from "./Home";
-import Cardemon from "./Cardemon";
-import RolyControly from "./RolyControly"
-import FloodedFox from "./FloodedFox"
-import CarBattle from "./CarBattle";
-import RecklessRubber from "./RecklessRubber"
-import ArApp from "./ArApp";
-import NotesApp from "./NotesApp"
-import Petstagram from "./Petstagram";
-import TwitterAPIBots from "./TwitterAPIBots";
-import ResumeGenie from "./ResumeGenie";
+import Home from "./home/Home";
+import Cardemon from "./projects/Cardemon";
+import RolyControly from "./projects/RolyControly";
+import FloodedFox from "./projects/FloodedFox";
+import CarBattle from "./projects/CarBattle";
+import RecklessRubber from "./projects/RecklessRubber";
+import ArApp from "./projects/ArApp";
+import NotesApp from "./projects/NotesApp";
+import Petstagram from "./projects/Petstagram";
+import TwitterAPIBots from "./projects/TwitterAPIBots";
+import ResumeGenie from "./projects/ResumeGenie";
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import ScrollToTop from './ScrollToTop';
+import ScrollToTop from "./common/ScrollToTop";
 
 function App() {
 

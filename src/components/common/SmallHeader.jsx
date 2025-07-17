@@ -1,6 +1,5 @@
 import React from "react";
-import Logo from "./img/j.png";
-import "../styles.css";
+import Logo from "../img/j.png";
 
 function SmallHeader(props) {
     return (  

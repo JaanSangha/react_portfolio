@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "./Navbar";
-import Header from "./BigHeader";
-import About from "./About";
-import Footer from "./Footer";
-import Projects from "./Projects";
-import CustomCursor from './CustomCursor';
+import Navbar from "../common/Navbar";
+import Header from "../common/BigHeader";
+import About from "../about/About";
+import Footer from "../common/Footer";
+import Projects from "../Projects";
+import CustomCursor from "../common/CustomCursor";
 import Comic from "./Comic";
 
 function Home() {

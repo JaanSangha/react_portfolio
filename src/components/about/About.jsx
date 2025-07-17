@@ -1,5 +1,5 @@
 import React from "react";
-import MePic from "./img/meabout.jpg"
+import MePic from "../img/meabout.jpg"
 
 function About()
 {
