@@ -18,6 +18,8 @@
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 30px;
+    background: linear-gradient(to bottom, #94A684, #AEC3AE, #E4E4D0, #FFEEF4);
+    min-height: 100vh;
   }
   
 header {
@@ -104,9 +106,9 @@ h2{
 }
 
 body {
-    background: #94A684;
-    background: linear-gradient(#94A684, #AEC3AE, #E4E4D0, #FFEEF4);
-  }
+  min-height: 100vh;
+  background: transparent;
+}
 
 .basicpadding {
     padding-bottom: 50px;
@@ -131,7 +133,7 @@ cards {
 }
 
 .footer {
-    background-color: #FFEEF4;
+    background-color: transparent;
     text-align: center;
   }
   
@@ -141,6 +143,21 @@ cards {
 
 .footerText{
     font-size: 1.4rem;
+}
+
+.card-img-overlay {
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.card-title {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+  margin: 0;
+  font-weight: bold;
 }
 
 .card-img-overlay h3 {
