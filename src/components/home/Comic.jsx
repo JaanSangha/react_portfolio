@@ -46,9 +46,9 @@ function Comic() {
     <div className="comicstrip">
       {selectedComic ? (
         <img
-          id="comicimg" 
-          src={selectedComic} 
-          alt="Random Peanuts comic strip" 
+          id="comicimg"
+          src={selectedComic}
+          alt="Random Peanuts comic strip"
         />
       ) : (
         <p>No comic selected</p>
