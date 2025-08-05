@@ -17,9 +17,9 @@ return (
                   style={{ 
                     display: 'block', 
                     margin: '0 auto 2rem auto', 
-                    width: '20vw',
-                    maxWidth: '400px',
-                    minWidth: '150px',
+                    width: '13.3vw',
+                    maxWidth: '267px',
+                    minWidth: '100px',
                     height: 'auto' 
                   }}
                 />
