@@ -23,7 +23,7 @@ function BigHeader() {
                                 animate={{ y: 0 }}
                                 transition={{ type: "tween", duration:1}}>
                                 <h1 className="text-md-start">Jaan Sangha</h1>
-                                <h2 className="text-md-start">Game Programmer / Full Stack Developer</h2>
+                                <h2 className="text-md-start">Game Programmer / Software Engineer</h2>
                                 </motion.div>
                             </div>
                             
