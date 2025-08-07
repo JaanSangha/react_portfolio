@@ -1,14 +1,14 @@
 import RSThumb from "./components/img/annaThumbedit.png"
 import SFThumb from "./components/img/simayathumb.png"
 import SBThumb from "./components/img/sanghabrosthumb.jpg"
-
+import WWThumb from "./components/img/WWThumb.png"
 
 const websites = [
 {
     id: 1,
-    title: "Rumours of Stevie",
-    thumbnail: RSThumb,
-    link: "https://rumoursofstevie.com/"
+    title: "We Liberate the World",
+    thumbnail: WWThumb,
+    link: "https://weliberatetheworld.com/"
 },
 {
     id: 2,
@@ -21,6 +21,12 @@ const websites = [
     title: "Sangha Brothers",
     thumbnail: SBThumb,
     link: "https://sanghabrothers.com/"
+},
+{
+    id: 4,
+    title: "Rumours of Stevie",
+    thumbnail: RSThumb,
+    link: "https://rumoursofstevie.com/"
 },
 ]
 
