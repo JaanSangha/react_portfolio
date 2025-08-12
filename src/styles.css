@@ -15,6 +15,15 @@
     cursor: none !important;
   }
 
+  .larger-text {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .larger-text li {
+    margin-bottom: 8px;
+  }
+
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 30px;
