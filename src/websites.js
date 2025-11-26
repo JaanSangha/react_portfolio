@@ -1,8 +1,8 @@
 import RSThumb from "./components/img/annaThumbedit.png"
 import SFThumb from "./components/img/simayathumb.png"
 import SBThumb from "./components/img/sanghabrosthumb.jpg"
-import WWThumb from "./components/img/WWThumb.png"
-import YRHousesThumb from "./components/img/YRHousesThumb.png"
+import WWThumb from "./components/img/WWThumb.jpg"
+import YRHousesThumb from "./components/img/YRHousesThumb.jpg"
 
 const websites = [
 {
