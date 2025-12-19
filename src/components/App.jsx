@@ -11,6 +11,7 @@ import Petstagram from "./projects/Petstagram";
 import TwitterAPIBots from "./projects/TwitterAPIBots";
 import ResumeGenie from "./projects/ResumeGenie";
 import CoachK from "./projects/CoachK";
+import TempHome from "./home/TempHome";
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import ScrollToTop from "./common/ScrollToTop";
 
@@ -22,6 +23,7 @@ return (
         <ScrollToTop />
             <Routes>
                 <Route exact path="/" element={<Home />} />
+                <Route exact path="/temp-home" element={<TempHome />} />
                 <Route exact path="/projects-cardemon" element={<Cardemon />} />
                 <Route exact path="/projects-rolycontroly" element={<RolyControly />} />
                 <Route exact path="/projects-floodedfox" element={<FloodedFox />} />
