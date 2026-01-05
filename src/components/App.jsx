@@ -1,5 +1,4 @@
 import React from "react";
-import Home from "./home/Home";
 import Cardemon from "./projects/Cardemon";
 import RolyControly from "./projects/RolyControly";
 import FloodedFox from "./projects/FloodedFox";
@@ -11,7 +10,7 @@ import Petstagram from "./projects/Petstagram";
 import TwitterAPIBots from "./projects/TwitterAPIBots";
 import ResumeGenie from "./projects/ResumeGenie";
 import CoachK from "./projects/CoachK";
-import TempHome from "./home/TempHome";
+import Home from "./home/Home";
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import ScrollToTop from "./common/ScrollToTop";
 
@@ -22,19 +21,19 @@ return (
         <Router>
         <ScrollToTop />
             <Routes>
-                <Route exact path="/" element={<Home />} />
-                <Route exact path="/temp-home" element={<TempHome />} />
-                <Route exact path="/projects-cardemon" element={<Cardemon />} />
-                <Route exact path="/projects-rolycontroly" element={<RolyControly />} />
-                <Route exact path="/projects-floodedfox" element={<FloodedFox />} />
-                <Route exact path="/projects-carbattle" element={<CarBattle />} />
-                <Route exact path="/projects-recklessrubber" element={<RecklessRubber />} />
-                <Route exact path="/projects-arapp" element={<ArApp />} />
-                <Route exact path="/projects-notesapp" element={<NotesApp />} />
-                <Route exact path="/projects-petstagram" element={<Petstagram />} />
-                <Route exact path="/projects-twitterapibots" element={<TwitterAPIBots />} />
-                <Route exact path="/projects-resumegenie" element={<ResumeGenie />} />
-                <Route exact path="/projects-coachk" element={<CoachK />} />
+                <Route path="/" element={<Home />} />
+                <Route path="/projects-cardemon" element={<Cardemon />} />
+                <Route path="/projects-rolycontroly" element={<RolyControly />} />
+                <Route path="/projects-floodedfox" element={<FloodedFox />} />
+                <Route path="/projects-carbattle" element={<CarBattle />} />
+                <Route path="/projects-recklessrubber" element={<RecklessRubber />} />
+                <Route path="/projects-arapp" element={<ArApp />} />
+                <Route path="/projects-notesapp" element={<NotesApp />} />
+                <Route path="/projects-petstagram" element={<Petstagram />} />
+                <Route path="/projects-twitterapibots" element={<TwitterAPIBots />} />
+                <Route path="/projects-resumegenie" element={<ResumeGenie />} />
+                <Route path="/projects-coachk" element={<CoachK />} />
+                <Route path="*" element={<Home />} />
             </Routes>
         </Router>
     </div>
