@@ -33,6 +33,7 @@ function Home() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+
   const handleContactSubmit = async (event) => {
     event.preventDefault();
     setFormStatus("Sending...");
@@ -130,7 +131,7 @@ I enjoy building things that actually get used.
       </div>
 
       <section
-        className="temp-home__split is-visible"
+        className="temp-home__split"
         id="about"
       >
         <div className="temp-home__split-text">
