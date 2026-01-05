@@ -1212,4 +1212,17 @@
     height: clamp(52px, 14vw, 64px);
     bottom: clamp(28px, 9vw, 38px);
   }
+
+  /* Disable marquee hover on mobile */
+  .temp-home__cta-text,
+  .temp-home__contact-text {
+    animation: none !important;
+    transform: translate(-50%, -50%) !important;
+    opacity: 1 !important;
+  }
+
+  .temp-home__cta-text:nth-child(2),
+  .temp-home__contact-text:nth-child(2) {
+    display: none;
+  }
 }
