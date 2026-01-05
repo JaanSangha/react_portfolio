@@ -109,6 +109,9 @@ function Home() {
           <a href="#contact" data-custom-cursor onClick={closeNav}>
             contact
           </a>
+          <a href="https://drive.google.com/file/d/1TT2_T6IgKwuOHmvSte3_Kp0-gqbJWmSx/view?usp=sharing" data-custom-cursor target="_blank" rel="noreferrer">
+            resume
+          </a>
         </div>
       </div>
 
