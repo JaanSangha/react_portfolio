@@ -77,6 +77,15 @@ function Home() {
   const toggleNav = () => setNavOpen((prev) => !prev);
   const closeNav = () => setNavOpen(false);
 
+  useEffect(() => {
+    if (window.location.hash) {
+      const target = document.querySelector(window.location.hash);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  }, []);
+
   // Hover tilt removed for perf; kept supportsHover for future use if needed.
 
   return (
@@ -100,13 +109,16 @@ function Home() {
           <span />
         </button>
         <div className="temp-home__links">
-          <a href="#about" data-custom-cursor onClick={closeNav}>
+          <a href="/" data-custom-cursor onClick={closeNav}>
+            home
+          </a>
+          <a href="/#about" data-custom-cursor onClick={closeNav}>
             about
           </a>
-          <a href="#projects" data-custom-cursor onClick={closeNav}>
+          <a href="/#projects" data-custom-cursor onClick={closeNav}>
             works
           </a>
-          <a href="#contact" data-custom-cursor onClick={closeNav}>
+          <a href="/#contact" data-custom-cursor onClick={closeNav}>
             contact
           </a>
           <a href="https://drive.google.com/file/d/1TT2_T6IgKwuOHmvSte3_Kp0-gqbJWmSx/view?usp=sharing" data-custom-cursor target="_blank" rel="noreferrer">

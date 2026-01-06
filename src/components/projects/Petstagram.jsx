@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useCallback } from "react";
-import PetsgramLogo from "../img/petsgramlogo.png";
 import PetGallery1 from "../img/galleries/petsgram/petsgram-1.png";
 import PetGallery2 from "../img/galleries/petsgram/petsgram-2.png";
 import PetGallery3 from "../img/galleries/petsgram/petsgram-3.png";
@@ -22,19 +21,6 @@ function Petstagram() {
   const toggleNav = () => setNavOpen((prev) => !prev);
   const closeNav = () => setNavOpen(false);
 
-  const meta = [
-    { label: "Role", value: "Product, Full-Stack" },
-    { label: "Stack", value: "Next.js · React Native · Supabase" },
-    { label: "Platforms", value: "Web · iOS/Android" },
-  ];
-
-  const highlights = [
-    "Cross-platform social network for pets with shared monorepo",
-    "Magic link auth + RLS-protected Supabase backend",
-    "Optimistic UI, real-time feeds, and content moderation",
-    "Smart image pipeline: drag-drop, crop, HEIC handling",
-  ];
-
   const features = [
     "Pet profiles, follows, feeds, likes, comments, bookmarks",
     "Real-time notifications and session sync across devices",
@@ -42,6 +28,10 @@ function Petstagram() {
     "Dark/light theming, accessibility, and PWA support",
     "Performance-focused: edge rendering, code splitting, lazy loading",
   ];
+
+  const focusAreas = features.slice(0, 2);
+  const extraHighlights = features.slice(2);
+  const techStack = ["Next.js 15", "React Native + Expo", "TypeScript", "Tailwind", "Supabase", "Postgres", "RLS"];
 
   const gallery = [
     { title: "Feed View", note: "Desktop", src: PetGallery1 },
@@ -123,59 +113,67 @@ function Petstagram() {
         >
           <div className="project-hero__content">
             <div className="project-hero__eyebrow">Case Study · Social Platform</div>
+            <div className="project-hero__badge-row">
+              <span>Web Application</span>
+              <span aria-hidden="true">•</span>
+              <span>2024</span>
+            </div>
             <h1>Petsgram</h1>
             <p className="project-hero__lede">
               A cross-platform social network for pets and their people — fast, friendly, and moderated for a healthy community.
             </p>
-            <div className="project-hero__actions">
-              <a className="project-btn" href="https://petsgram.ca" target="_blank" rel="noreferrer">Live Site</a>
+          </div>
+        </section>
+
+        <section className="project-summary">
+          <div className="project-details-card">
+            <div className="project-details-card__eyebrow">Project Details</div>
+            <div className="project-details-card__row">
+              <span>Role</span>
+              <strong>Lead Developer</strong>
+            </div>
+            <div className="project-details-card__row">
+              <span>Year</span>
+              <strong>2024</strong>
+            </div>
+            <div className="project-details-card__row">
+              <span>Focus Areas</span>
+              <ul className="project-details-card__list">
+                {focusAreas.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="project-details-card__row">
+              <span>Stack</span>
+              <div className="project-details-card__pills">
+                {techStack.map((pill) => (
+                  <span key={pill}>{pill}</span>
+                ))}
+              </div>
+            </div>
+            <div className="project-details-card__actions">
+              <a className="project-btn project-btn--solid" href="https://petsgram.ca" target="_blank" rel="noreferrer">Live Site</a>
               <a className="project-btn project-btn--ghost" href="https://www.youtube.com/watch?v=scTLfKa0E7g" target="_blank" rel="noreferrer">Demo</a>
             </div>
-            <div className="project-hero__meta">
-              {meta.map((item) => (
-                <div key={item.label}>
-                  <span>{item.label}</span>
-                  <strong>{item.value}</strong>
-                </div>
+          </div>
+          <div className="project-overview">
+            <h3>Overview</h3>
+            <p>
+              Petsgram is a full-stack social platform built for pet owners. The shared monorepo powers both the web app and React Native mobile app,
+              backed by Supabase for auth, storage, and real-time data. Moderation, performance, and accessibility were top priorities from day one.
+            </p>
+            <h4>The Challenge</h4>
+            <p>Pet communities need healthy, fast interactions without spam, toxic content, or sluggish cross-device experiences.</p>
+            <h4>The Solution</h4>
+            <p>Shared monorepo for web and mobile, Supabase auth/storage with RLS, real-time feeds, and AI-assisted moderation keep experiences quick and safe.</p>
+            <h4>Key Outcomes</h4>
+            <p>Responsive web/mobile parity, stronger community signals, and confident content safety with faster releases.</p>
+            <h4>Additional Highlights</h4>
+            <ul className="project-overview-list">
+              {extraHighlights.map((item) => (
+                <li key={item}>{item}</li>
               ))}
-            </div>
-          </div>
-          <div className="project-hero__logo">
-            <img src={PetsgramLogo} alt="Petsgram logo" />
-          </div>
-        </section>
-
-        <section className="project-section">
-          <h3>Overview</h3>
-          <p>
-            Petsgram is a full-stack social platform built for pet owners. The shared monorepo powers both the web app and React Native mobile app,
-            backed by Supabase for auth, storage, and real-time data. Moderation, performance, and accessibility were top priorities from day one.
-          </p>
-          <div className="project-list">
-            {highlights.map((h) => (
-              <div key={h}>{h}</div>
-            ))}
-          </div>
-        </section>
-
-        <section className="project-section project-section--two">
-          <div>
-            <h3>Key Features</h3>
-            <div className="project-list">
-              {features.map((f) => (
-                <div key={f}>{f}</div>
-              ))}
-            </div>
-          </div>
-          <div className="project-card">
-            <h4>Tech Stack</h4>
-            <div className="project-pills">
-              {["Next.js 15", "React Native + Expo", "TypeScript", "Tailwind", "Supabase", "Postgres", "RLS"].map((pill) => (
-                <span className="project-pill" key={pill}>{pill}</span>
-              ))}
-            </div>
-            <h4>Highlights</h4>
-            <ul className="project-bullets">
               <li>Magic link auth, RLS-secured data</li>
               <li>Optimistic UI + real-time feeds</li>
               <li>Image pipeline (crop, convert, HEIC support)</li>
@@ -184,7 +182,7 @@ function Petstagram() {
           </div>
         </section>
 
-        <section className="project-section">
+        <section className="project-section project-section--gallery">
           <h3>Gallery</h3>
           <div className="project-gallery">
             {gallery.map((item, idx) => (
