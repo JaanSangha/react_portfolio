@@ -65,12 +65,12 @@ function Petstagram() {
   return (
     <div className="project-page">
       <div className={`temp-home__nav ${navElevated ? "is-elevated" : ""} ${navOpen ? "is-open" : ""}`} role="banner">
-        <div className="temp-home__brand">
+        <a className="temp-home__brand temp-home__brand-link" href="/" data-custom-cursor onClick={closeNav}>
           <span className="temp-home__brand-name" data-custom-cursor>
             Jaan Sangha
           </span>
           <span className="temp-home__brand-role">Software Engineer, Developer</span>
-        </div>
+        </a>
         <button
           type="button"
           className="temp-home__menu-toggle"
@@ -128,14 +128,6 @@ function Petstagram() {
         <section className="project-summary">
           <div className="project-details-card">
             <div className="project-details-card__eyebrow">Project Details</div>
-            <div className="project-details-card__row">
-              <span>Role</span>
-              <strong>Lead Developer</strong>
-            </div>
-            <div className="project-details-card__row">
-              <span>Year</span>
-              <strong>2024</strong>
-            </div>
             <div className="project-details-card__row">
               <span>Focus Areas</span>
               <ul className="project-details-card__list">

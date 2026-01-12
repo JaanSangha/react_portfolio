@@ -310,7 +310,7 @@
 .project-section--gallery {
   margin-top: clamp(4px, 1.5vw, 12px);
   padding-top: clamp(12px, 3vw, 18px);
-  margin-bottom: clamp(24px, 5vw, 48px);
+  margin-bottom: clamp(6px, 2.4vw, 12px);
   background: rgba(229, 218, 204, 0.96);
   border-color: rgba(70, 56, 40, 0.16);
   box-shadow: 0 12px 24px rgba(43, 36, 26, 0.08);
@@ -659,16 +659,28 @@
 
 @media (max-width: 768px) {
   .project-page {
-    padding: clamp(120px, 20vw, 160px) clamp(16px, 6vw, 26px) clamp(32px, 8vw, 42px);
+    padding: clamp(44px, 8vw, 64px) clamp(10px, 4vw, 18px) 0;
   }
 
   .project-hero {
-    gap: 16px;
-    margin-top: clamp(16px, 5vw, 28px);
+    gap: 10px;
+    margin-top: 0;
+    padding: clamp(20px, 4.5vw, 30px) 0 clamp(16px, 4vw, 22px);
+    min-height: clamp(180px, 42vh, 280px);
   }
 
   .project-list {
     grid-template-columns: 1fr;
+  }
+
+  .project-main {
+    padding-top: 0;
+    padding-bottom: 0;
+    gap: clamp(10px, 3vw, 18px);
+  }
+
+  .project-section {
+    margin-top: clamp(6px, 2vw, 12px);
   }
 }
 
@@ -746,6 +758,11 @@
   flex-wrap: nowrap;
   white-space: nowrap;
   min-width: 0;
+}
+
+.temp-home__brand-link {
+  text-decoration: none;
+  color: inherit;
 }
 
 .temp-home__brand-name {
@@ -1376,7 +1393,8 @@
   background: rgba(12, 10, 8, 0.58);
   border-top: 1px solid rgba(245, 233, 216, 0.12);
   backdrop-filter: blur(12px);
-  padding-bottom: clamp(8px, 1.6vw, 14px);
+  padding-bottom: clamp(2px, 0.8vw, 6px);
+  margin-bottom: -2px;
 }
 
 .project-page .temp-home__footer::before {

@@ -1,68 +1,289 @@
-import React from "react";
-import Footer from "../common/Footer";
-import SmallHeader from "../common/SmallHeader";
-import CustomCursor from '../common/CustomCursor';
-import CoachkLogo from "../img/coachklogo.png";
+import React, { useEffect, useState, useCallback } from "react";
+import Coachk1 from "../img/galleries/coachk/coachk-1.png";
+import Coachk2 from "../img/galleries/coachk/coachk-2.png";
+import Coachk3 from "../img/galleries/coachk/coachk-3.png";
+import Coachk4 from "../img/galleries/coachk/coachk-4.png";
 
 function CoachK() {
+  const [navOpen, setNavOpen] = useState(false);
+  const [navElevated, setNavElevated] = useState(false);
+  const currentYear = new Date().getFullYear();
+  const [lightboxIndex, setLightboxIndex] = useState(null);
+  const [touchStartX, setTouchStartX] = useState(null);
 
-return (
-    <div>
-    <SmallHeader name="Coach K" />
-        <div className="container text-center">
-            <div className="col-lg-10 mx-auto">
-                <img 
-                  src={CoachkLogo} 
-                  alt="Coach K Logo" 
-                  style={{ 
-                    display: 'block', 
-                    margin: '0 auto 2rem auto', 
-                    width: '13.3vw',
-                    maxWidth: '267px',
-                    minWidth: '100px',
-                    height: 'auto' 
+  useEffect(() => {
+    const onScroll = () => setNavElevated(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const toggleNav = () => setNavOpen((prev) => !prev);
+  const closeNav = () => setNavOpen(false);
+
+  const focusAreas = [
+    "AI-powered training recommendations",
+    "Strava OAuth + real-time sync",
+    "Secure, scalable Next.js 14 app",
+  ];
+
+  const techStack = [
+    "Next.js 14",
+    "TypeScript",
+    "Tailwind CSS",
+    "Supabase + Postgres",
+    "OpenAI API",
+    "Strava API",
+    "Vercel",
+    "RLS security",
+  ];
+
+  const gallery = [
+    { title: "Coach K Gallery 1", src: Coachk1 },
+    { title: "Coach K Gallery 2", src: Coachk2 },
+    { title: "Coach K Gallery 3", src: Coachk3 },
+    { title: "Coach K Gallery 4", src: Coachk4 },
+  ];
+
+  const openLightbox = (idx) => setLightboxIndex(idx);
+  const closeLightbox = () => setLightboxIndex(null);
+  const nextLightbox = useCallback(
+    () => setLightboxIndex((prev) => (prev === null ? 0 : (prev + 1) % gallery.length)),
+    [gallery.length]
+  );
+  const prevLightbox = useCallback(
+    () => setLightboxIndex((prev) => (prev === null ? 0 : (prev - 1 + gallery.length) % gallery.length)),
+    [gallery.length]
+  );
+
+  useEffect(() => {
+    if (lightboxIndex === null) return;
+    const onKey = (e) => {
+      if (e.key === "ArrowRight") nextLightbox();
+      if (e.key === "ArrowLeft") prevLightbox();
+      if (e.key === "Escape") closeLightbox();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [lightboxIndex, nextLightbox, prevLightbox]);
+
+  return (
+    <div className="project-page">
+      <div className={`temp-home__nav ${navElevated ? "is-elevated" : ""} ${navOpen ? "is-open" : ""}`} role="banner">
+        <a className="temp-home__brand temp-home__brand-link" href="/" data-custom-cursor onClick={closeNav}>
+          <span className="temp-home__brand-name" data-custom-cursor>
+            Jaan Sangha
+          </span>
+          <span className="temp-home__brand-role">Software Engineer, Developer</span>
+        </a>
+        <button
+          type="button"
+          className="temp-home__menu-toggle"
+          aria-expanded={navOpen}
+          aria-label="Toggle navigation"
+          onClick={toggleNav}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+        <div className="temp-home__links">
+          <a href="/" data-custom-cursor onClick={closeNav}>
+            home
+          </a>
+          <a href="/#about" data-custom-cursor onClick={closeNav}>
+            about
+          </a>
+          <a href="/#projects" data-custom-cursor onClick={closeNav}>
+            works
+          </a>
+          <a href="/#contact" data-custom-cursor onClick={closeNav}>
+            contact
+          </a>
+          <a
+            href="https://drive.google.com/file/d/1TT2_T6IgKwuOHmvSte3_Kp0-gqbJWmSx/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+            data-custom-cursor
+            onClick={closeNav}
+          >
+            resume
+          </a>
+        </div>
+      </div>
+
+      <main className="project-main">
+        <section className="project-hero">
+          <div className="project-hero__content">
+            <div className="project-hero__eyebrow">Case Study · AI Fitness Coaching</div>
+            <div className="project-hero__badge-row">
+              <span>Web Application</span>
+              <span aria-hidden="true">•</span>
+              <span>2024</span>
+            </div>
+            <h1>Coach K</h1>
+            <p className="project-hero__lede">
+              Coach K blends Strava integration with OpenAI-driven coaching to deliver tailored, real-time training guidance for every athlete.
+            </p>
+          </div>
+        </section>
+
+        <section className="project-summary">
+          <div className="project-details-card">
+            <div className="project-details-card__eyebrow">Project Details</div>
+            <div className="project-details-card__row">
+              <span>Focus Areas</span>
+              <ul className="project-details-card__list">
+                {focusAreas.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="project-details-card__row">
+              <span>Stack</span>
+              <div className="project-details-card__pills">
+                {techStack.map((pill) => (
+                  <span key={pill}>{pill}</span>
+                ))}
+              </div>
+            </div>
+            <div className="project-details-card__actions">
+              <a className="project-btn project-btn--solid" href="https://coachk-chi.vercel.app" target="_blank" rel="noreferrer">
+                Live Site
+              </a>
+            </div>
+          </div>
+          <div className="project-overview">
+            <h3>Overview</h3>
+            <p>
+              Coach K is a full-stack web application designed to revolutionize personal fitness coaching. By combining seamless Strava integration with the
+              analytical power of OpenAI, the app delivers tailored training recommendations and interactive coaching in real time. Whether you&apos;re a
+              recreational runner or a competitive athlete, Coach K adapts to your goals and workout history. Check out the app{" "}
+              <a href="https://coachk-chi.vercel.app" target="_blank" rel="noreferrer" data-custom-cursor>
+                here
+              </a>
+              .
+            </p>
+            <p>
+              The platform is built with a strong focus on personalization, security, and scalability, ensuring that each user&apos;s journey is both unique
+              and protected.
+            </p>
+            <h4>The Challenge</h4>
+            <p>Deliver fast, reliable coaching that personalizes to every athlete&apos;s evolving data while keeping sensitive fitness information secure.</p>
+            <h4>The Solution</h4>
+            <p>
+              The frontend runs on Next.js 14 with the App Router, TypeScript, and Tailwind CSS for a responsive, accessible UI. Supabase powers auth and data
+              with RLS-secured Postgres, while server-side API routes handle Strava and OpenAI integrations to keep secrets off the client. Deployment via
+              Vercel provides CI/CD, edge caching, and analytics.
+            </p>
+            <p>
+              AI coaching uses OpenAI to analyze synced Strava workouts, surface trends like overtraining or recovery needs, and power a persistent chat
+              interface that retains context.
+            </p>
+            <h4>Key Outcomes</h4>
+            <p>
+              Real-time Strava sync, adaptive AI guidance, and rich dashboards give athletes clear visibility into progress while maintaining privacy and
+              reliability across devices.
+            </p>
+            <h4>Additional Highlights</h4>
+            <ul className="project-overview-list">
+              <li>OAuth2 Strava connection with automatic 24-hour activity refresh</li>
+              <li>Activity dashboard with weekly mileage, intensity, and goal tracking</li>
+              <li>Dark-mode default, semantic HTML, ARIA labels, and full keyboard navigation</li>
+              <li>RLS-enforced data access and server-side secret handling for security</li>
+              <li>Monorepo structure with shared logic ready for future mobile expansion</li>
+              <li>Vercel-backed deployment with monitoring and smooth loading states</li>
+            </ul>
+          </div>
+        </section>
+
+        <section className="project-section project-section--gallery">
+          <h3>Gallery</h3>
+          <div className="project-gallery">
+            {gallery.map((item, idx) => (
+              <div className="project-gallery__item" key={item.title}>
+                <div
+                  className="project-gallery__thumb"
+                  style={{ backgroundImage: `url(${item.src})` }}
+                  aria-hidden="true"
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => openLightbox(idx)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") openLightbox(idx);
                   }}
                 />
-            </div>
-        </div>
+              </div>
+            ))}
+          </div>
+        </section>
 
-        <div className="container text-left">
-            <div className="row">
-                <div className="col-lg-10 mx-auto">
-                    <h3>Introduction</h3>
-                    <p className="lead mb-5">Coach K is a full-stack web application designed to revolutionize personal fitness coaching. By combining seamless Strava integration with the analytical power of OpenAI, the app delivers tailored training recommendations and interactive coaching, all in real time. Whether you're a recreational runner or a competitive athlete, Coach K offers smart insights into your performance and progress while adapting to your goals and workout history. The platform was built with a strong focus on personalization, security, and scalability, ensuring that each user's journey is both unique and protected. You can check out the app <a href="https://coachk-chi.vercel.app" target="_blank" rel="noopener noreferrer" data-custom-cursor>here</a>.</p>
-                    
-                    <h3>Building with Modern Web Technologies</h3>
-                    <p className="lead mb-5">The frontend of Coach K is built using Next.js 14 with the App Router architecture, enabling server components and modern React patterns for a high-performance, scalable user interface. TypeScript is used throughout the codebase for type safety and developer efficiency, while Tailwind CSS ensures a responsive and accessible design system. For authentication, Supabase Auth is used to implement passwordless login via magic links, creating a smooth onboarding experience without the need for traditional credentials.</p>
-                    <p className="lead mb-5">On the backend, Supabase serves as the database and real-time engine, leveraging PostgreSQL and Row Level Security (RLS) to enforce strict access control at the row level. All business logic and external API integrations are handled server-side via Next.js API routes, keeping sensitive operations secure and efficient. Deployment is handled through Vercel, which enables automatic CI/CD, edge caching, and performance monitoring with built-in analytics.</p>
-                    
-                    <h3>Intelligent Fitness with AI Coaching</h3>
-                    <p className="lead mb-5">At the heart of Coach K is its AI-powered coaching system, built using OpenAI's API. After syncing workouts from Strava, the app analyzes user data to generate context-aware training recommendations tailored to recent performance and user-defined goals. This isn't a static training plan, it evolves with the user. The AI is capable of understanding trends such as overtraining, plateaus, or gaps in recovery, and adjusts advice accordingly. Users can interact directly with their AI coach via a persistent chat interface, which retains conversational history and provides real-time feedback based on past discussions and performance metrics.</p>
-                    
-                    <h3>Seamless Strava Integration</h3>
-                    <p className="lead mb-5">Users can securely connect their Strava accounts through OAuth2, allowing the app to import fitness data in real time. Once linked, Coach K automatically synchronizes activities including runs, rides, and other workouts. Athlete profile data such as weight, city, and performance stats are also pulled in to enrich the user profile. The connection remains persistent, requiring no reauthorization unless explicitly revoked by the user. Background jobs refresh the activity data every 24 hours, ensuring that users always have the latest metrics available when reviewing progress or receiving coaching advice.</p>
-                    
-                    <h3>Visualizing Progress and Tracking Performance</h3>
-                    <p className="lead mb-5">A major goal of the app is to help users understand their fitness trajectory. Coach K includes a dynamic activity dashboard where users can view recent workouts, weekly mileage, elevation gain, and training intensity. Interactive charts provide a clear visual overview of trends and progress over time. The app highlights recovery periods, personal milestones, and potential risks like overexertion or undertraining. Users can also set specific fitness goals, such as increasing weekly distance or preparing for a race, and monitor their progress with visual goal tracking tools.</p>
-                    
-                    <h3>Designed for Experience and Accessibility</h3>
-                    <p className="lead mb-5">Coach K delivers a smooth, professional user experience across devices. A persistent layout ensures that the sidebar and top navigation remain in place during transitions, creating a fast and intuitive interface. The application supports dark mode by default and uses smooth loading animations and skeleton components to improve perceived performance. Attention has also been given to accessibility, with semantic HTML, proper ARIA labels, and full keyboard navigation support, making the app usable by a broader audience.</p>
-                    
-                    <h3>Secure by Design</h3>
-                    <p className="lead mb-5">From the start, data privacy and security were treated as top priorities. Row Level Security in Supabase ensures that each user can access only their own data, enforced at the database level. All API keys and tokens are stored securely and never exposed to the client, and server-side logic handles all authentication refreshes and external API requests. Combined with Supabase's real-time capabilities and Postgres indexing, the system remains both secure and performant at scale.</p>
-                    
-                    <h3>Scalable, Maintainable, and Production-Ready</h3>
-                    <p className="lead mb-5">Coach K is structured as a monorepo, supporting future expansion into mobile platforms while sharing core logic and types between web and mobile codebases. The development process follows modern best practices, including Git-based version control, environment-specific configuration, and database migrations through the Supabase CLI. Error boundaries, fallback states, and comprehensive logging ensure that users encounter minimal friction and that developers can quickly respond to issues. Performance monitoring through Vercel Analytics allows for continuous improvement as the platform grows.</p>
-                </div>
-            </div>
-        </div>
+        {lightboxIndex !== null && (
+          <div
+            className="project-lightbox"
+            role="dialog"
+            aria-modal="true"
+            onClick={(e) => {
+              if (e.target === e.currentTarget) closeLightbox();
+            }}
+            onTouchStart={(e) => setTouchStartX(e.changedTouches[0].clientX)}
+            onTouchEnd={(e) => {
+              if (touchStartX === null) return;
+              const delta = e.changedTouches[0].clientX - touchStartX;
+              if (delta > 30) prevLightbox();
+              if (delta < -30) nextLightbox();
+              setTouchStartX(null);
+            }}
+          >
+            <button className="project-lightbox__close" onClick={closeLightbox} aria-label="Close gallery">
+              ×
+            </button>
+            <button
+              className="project-lightbox__nav project-lightbox__nav--prev"
+              onClick={(e) => {
+                e.stopPropagation();
+                prevLightbox();
+              }}
+              aria-label="Previous image"
+            >
+              ‹
+            </button>
+            <img src={gallery[lightboxIndex].src} alt="Gallery item" />
+            <button
+              className="project-lightbox__nav project-lightbox__nav--next"
+              onClick={(e) => {
+                e.stopPropagation();
+                nextLightbox();
+              }}
+              aria-label="Next image"
+            >
+              ›
+            </button>
+          </div>
+        )}
+      </main>
 
-        <Footer />
-        <CustomCursor />
+      <footer className="temp-home__footer">
+        <div className="temp-home__footer-links">
+          <a href="https://www.linkedin.com/in/jaansangha" target="_blank" rel="noreferrer">
+            LinkedIn
+          </a>
+          <a href="https://github.com/jaansangha" target="_blank" rel="noreferrer">
+            GitHub
+          </a>
+          <a href="mailto:jaansangha10@gmail.com" target="_blank" rel="noreferrer">
+            Email
+          </a>
+          <a href="https://www.etsy.com/ca/shop/SanghaDesignHub" target="_blank" rel="noreferrer">
+            Etsy
+          </a>
+        </div>
+        <div className="temp-home__footer-meta">
+          <span>© Jaan Sangha {currentYear}</span>
+        </div>
+      </footer>
     </div>
-    );
-
+  );
 }
-
 
 export default CoachK;
