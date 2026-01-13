@@ -763,6 +763,10 @@
 .temp-home__brand-link {
   text-decoration: none;
   color: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(6px, 0.8vw, 10px);
+  cursor: pointer;
 }
 
 .temp-home__brand-name {
@@ -1446,8 +1450,6 @@
   grid-template-columns: minmax(200px, 0.85fr) minmax(280px, 1.15fr);
   align-items: center;
   gap: clamp(12px, 2.6vw, 24px);
-  text-decoration: none;
-  color: inherit;
   width: 90%;
 }
 
@@ -1516,6 +1518,12 @@
   border: 1px solid rgba(245, 233, 216, 0.15);
   isolation: isolate;
   transform: perspective(900px);
+}
+
+.temp-home__project-thumb-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 
 .temp-home__project-row:nth-child(odd) {

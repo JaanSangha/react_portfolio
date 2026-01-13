@@ -1,41 +1,165 @@
-import React from "react";
-import Footer from "../common/Footer";
-import SmallHeader from "../common/SmallHeader";
-import CustomCursor from '../common/CustomCursor';
+import React, { useEffect, useState } from "react";
 
 function FloodedFox() {
+  const [navOpen, setNavOpen] = useState(false);
+  const [navElevated, setNavElevated] = useState(false);
+  const currentYear = new Date().getFullYear();
 
-return (
-    <div>
-    <SmallHeader name="Flooded Fox" />
-        <div className="container text-center">
-            <div className="col-lg-10 mx-auto">
-                <h1>Flooded Fox</h1>
-                <iframe className="basicpadding" title="Flooded Fox Demo Video" width= "80%" height="400"
-				    src="https://www.youtube.com/embed/BanOcFkxQsY?si=-D-mZbtNvFATS6qk">
-				</iframe>
-            </div>
+  useEffect(() => {
+    const onScroll = () => setNavElevated(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const toggleNav = () => setNavOpen((prev) => !prev);
+  const closeNav = () => setNavOpen(false);
+
+  const focusAreas = [
+    "Game jam build under 24 hours",
+    "Rising-water pressure with vertical escape",
+    "Key and switch puzzles gating each floor",
+  ];
+
+  const techStack = ["Unity 3D", "C#", "Game jam (24h)", "Trigger/interaction system", "Timer-driven hazards"];
+
+  const highlights = [
+    "Theme: “Running out of space” — outrun a vertical flood",
+    "Keys and switches unlock doors to climb higher",
+    "Fail state tied to water level reaching the player’s floor",
+    "Short, replayable loop built for beating your best time",
+    "Completed solo in one day for a jam",
+  ];
+
+  return (
+    <div className="project-page">
+      <div className={`temp-home__nav ${navElevated ? "is-elevated" : ""} ${navOpen ? "is-open" : ""}`} role="banner">
+        <a className="temp-home__brand temp-home__brand-link" href="/" data-custom-cursor onClick={closeNav}>
+          <span className="temp-home__brand-name" data-custom-cursor>
+            Jaan Sangha
+          </span>
+          <span className="temp-home__brand-role">Software Engineer, Developer</span>
+        </a>
+        <button
+          type="button"
+          className="temp-home__menu-toggle"
+          aria-expanded={navOpen}
+          aria-label="Toggle navigation"
+          onClick={toggleNav}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+        <div className="temp-home__links">
+          <a href="/" data-custom-cursor onClick={closeNav}>
+            home
+          </a>
+          <a href="/#about" data-custom-cursor onClick={closeNav}>
+            about
+          </a>
+          <a href="/#projects" data-custom-cursor onClick={closeNav}>
+            works
+          </a>
+          <a href="/#contact" data-custom-cursor onClick={closeNav}>
+            contact
+          </a>
+          <a
+            href="https://drive.google.com/file/d/1TT2_T6IgKwuOHmvSte3_Kp0-gqbJWmSx/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+            data-custom-cursor
+            onClick={closeNav}
+          >
+            resume
+          </a>
         </div>
+      </div>
 
-        <div className="container text-left">
-            <div className="row">
-                <div className="col-lg-10 mx-auto">
-                    <h3>Introduction</h3>
-                    <p className="lead mb-5">I created a game using Unity with the theme "Running out of space" for a game jam in one day. The player must avoid the rising water level and make it to the rescue vehicle. This game was created using Unity 3D and C#.</p>
-                    <h3>Unlocking Doors</h3>
-                    <p className="lead mb-5">In order to progress to the next floor and get further away from the rising water, the player must unlock the doors which block their path. This is done by interacting with switches and finding keys that are hidden around the map.</p>
-                    <h3>Running Out Of Space (Gamejam theme)</h3>
-                    <p className="lead mb-5">If the player cannot find all the switches and reach the escape vehicle on the roof by the time the water level reaches whatever floor they are on, they will be submerged in it and lose the game. The game is meant to be challenging and fun to replay to try and beat your best time.</p>
-                </div>
+      <main className="project-main">
+        <section className="project-hero">
+          <div className="project-hero__content">
+            <div className="project-hero__eyebrow">Case Study · Game Jam</div>
+            <div className="project-hero__badge-row">
+              <span>Game</span>
+              <span aria-hidden="true">•</span>
+              <span>24h Jam</span>
             </div>
-        </div>
+            <h1>Flooded Fox</h1>
+            <p className="project-hero__lede">
+              A one-day jam game about outrunning a rising flood — climb floors, unlock doors, and reach the rescue vehicle before the water catches you.
+            </p>
+          </div>
+        </section>
 
-        <Footer />
-        <CustomCursor />
+        <section className="project-summary">
+          <div className="project-details-card">
+            <div className="project-details-card__eyebrow">Project Details</div>
+            <div className="project-details-card__row">
+              <span>Focus Areas</span>
+              <ul className="project-details-card__list">
+                {focusAreas.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="project-details-card__row">
+              <span>Stack</span>
+              <div className="project-details-card__pills">
+                {techStack.map((pill) => (
+                  <span key={pill}>{pill}</span>
+                ))}
+              </div>
+            </div>
+            <div className="project-details-card__actions">
+              <a className="project-btn project-btn--solid" href="https://www.youtube.com/watch?v=BanOcFkxQsY" target="_blank" rel="noreferrer">
+                Demo
+              </a>
+            </div>
+          </div>
+          <div className="project-overview">
+            <h3>Overview</h3>
+            <p>
+              Flooded Fox was built in 24 hours for a “Running out of space” jam. You ascend a building while a flood rises; doors are locked behind switches and
+              keys, so movement and puzzle solving both matter.
+            </p>
+            <h4>Challenge</h4>
+            <p>Deliver a complete, tense loop in a single day that fits the jam theme and rewards replay attempts.</p>
+            <h4>Solution</h4>
+            <p>Time pressure from the rising water, simple key/switch gates per floor, and a short path to the roof rescue keep focus on execution over scope.</p>
+            <h4>Key Outcomes</h4>
+            <p>A tight, replayable vertical escape with clear failure states and bite-sized runs for best-time chasing.</p>
+            <h4>Additional Highlights</h4>
+            <ul className="project-overview-list">
+              {highlights.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <footer className="temp-home__footer">
+        <div className="temp-home__footer-links">
+          <a href="https://www.linkedin.com/in/jaansangha" target="_blank" rel="noreferrer">
+            LinkedIn
+          </a>
+          <a href="https://github.com/jaansangha" target="_blank" rel="noreferrer">
+            GitHub
+          </a>
+          <a href="mailto:jaansangha10@gmail.com" target="_blank" rel="noreferrer">
+            Email
+          </a>
+          <a href="https://www.etsy.com/ca/shop/SanghaDesignHub" target="_blank" rel="noreferrer">
+            Etsy
+          </a>
+        </div>
+        <div className="temp-home__footer-meta">
+          <span>© Jaan Sangha {currentYear}</span>
+        </div>
+      </footer>
     </div>
-    );
-
+  );
 }
-
 
 export default FloodedFox;

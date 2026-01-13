@@ -186,7 +186,7 @@ I enjoy building things that actually get used.
 
         {filteredProjects.map((proj, idx) => (
           // Control layout per index: 3rd row (idx 2) image left, 4th row (idx 3) image right
-          <a
+          <div
             key={proj.title}
             className={`temp-home__project-row ${
               idx === 2
@@ -199,20 +199,23 @@ I enjoy building things that actually get used.
             } ${
               idx % 3 === 0 ? "temp-home__project-row--wide" : ""
             }`}
-            href={proj.link}
-            target="_blank"
-            rel="noreferrer"
           >
             <div className="temp-home__project-info">
               <div className="temp-home__project-name">{proj.title}</div>
               <div className="temp-home__project-role">{proj.role}</div>
             </div>
-            <div
-              className="temp-home__project-thumb"
-              aria-hidden="true"
-              style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.25)), url(${proj.img})` }}
-            />
-          </a>
+            <a
+              className="temp-home__project-thumb-link"
+              href={proj.link}
+              aria-label={`Open ${proj.title}`}
+            >
+              <div
+                className="temp-home__project-thumb"
+                aria-hidden="true"
+                style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.25)), url(${proj.img})` }}
+              />
+            </a>
+          </div>
         ))}
       </section>
 
