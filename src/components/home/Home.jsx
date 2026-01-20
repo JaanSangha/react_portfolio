@@ -152,9 +152,7 @@ I enjoy building things that actually get used.
         <div className="temp-home__split-text">
           <h2>Hello. I am Jaan</h2>
           <p className="temp-home__split-body">
-          I’m a software engineer with a strong product mindset, driven by building things that make work easier and experiences better.
-        I’ve led and contributed to projects spanning web applications, internal tools, automation systems, and digital platforms. Working with startups, organizations, and my own ventures. I’m comfortable moving from idea to execution, handling design decisions, technical trade-offs, and real-world constraints along the way.
-      I enjoy solving messy problems, simplifying complex systems, and turning concepts into reliable products.
+          I’m a software engineer who enjoys building practical, well-designed systems. I’ve worked on web applications, internal tools, automation, and digital platforms in organizations, and my own projects. I like being involved from early ideas to final delivery, making technical decisions, fixing edge cases, and figuring out how things should work in real life. I’m drawn to messy problems, complex workflows, and turning them into clear, reliable solutions. I care about building things that are simple, maintainable, and built with intention.
           </p>
         </div>
         <div className="temp-home__split-figure" aria-hidden="true">
