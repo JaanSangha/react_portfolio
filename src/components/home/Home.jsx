@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import RS from "../img/annaThumbedit.png";
 import SF from "../img/simayathumb.png";
 import SB from "../img/sanghabrosthumb.jpg";
-import WW from "../img/WWThumb.jpg";
 import YR from "../img/YRHousesThumb.jpg";
 import PetsThumb from "../img/petsgram.png";
 import CoachThumb from "../img/coachk.png";
@@ -61,7 +60,6 @@ function Home() {
     { title: "CoachK", role: "Applications", img: CoachThumb, link: "/projects-coachk", category: "applications" },
     { title: "ResumeGenie", role: "Applications", img: ResumeThumb, link: "/projects-resumegenie", category: "applications" },
     { title: "Twitter API Bots", role: "Applications", img: TwitterThumb, link: "/projects-twitterapibots", category: "applications" },
-    { title: "We Liberate the World", role: "Web Design, Development", img: WW, link: "https://weliberatetheworld.com/", category: "websites" },
     { title: "York Region Houses", role: "Web Design, Development", img: YR, link: "https://www.yorkregionhousesforsale.com/", category: "websites" },
     { title: "Sangha Brothers", role: "Web Design, Development", img: SB, link: "https://sanghabrothers.com/", category: "websites" },
     { title: "Simaya Foundation", role: "Web Design, Development", img: SF, link: "https://simayafoundation.org/", category: "websites" },
