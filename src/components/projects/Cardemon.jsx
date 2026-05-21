@@ -83,7 +83,7 @@ function Cardemon() {
       <main className="project-main">
         <section className="project-hero">
           <div className="project-hero__content">
-            <div className="project-hero__eyebrow">Case Study · Game Development</div>
+            <div className="project-hero__eyebrow">Project · Game Development</div>
             <div className="project-hero__badge-row">
               <span>Game</span>
               <span aria-hidden="true">•</span>

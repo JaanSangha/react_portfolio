@@ -112,7 +112,7 @@ function Petstagram() {
           className="project-hero"
         >
           <div className="project-hero__content">
-            <div className="project-hero__eyebrow">Case Study · Social Platform</div>
+            <div className="project-hero__eyebrow">Project · Social Platform</div>
             <div className="project-hero__badge-row">
               <span>Web Application</span>
               <span aria-hidden="true">•</span>

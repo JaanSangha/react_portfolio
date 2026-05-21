@@ -7,6 +7,7 @@ import PetsThumb from "../img/petsgram.png";
 import CoachThumb from "../img/coachk.png";
 import ResumeThumb from "../img/resumegenie.png";
 import TwitterThumb from "../img/twitterbots.png";
+import TrailblazerThumb from "../img/Trailblazer/TrailblazerText.png";
 import CardemonThumb from "../img/CardemonThumbRounded.PNG";
 import RolyThumb from "../img/RCThumbRounded.jpg";
 import CarBattleThumb from "../img/CarGamePic.PNG";
@@ -56,9 +57,10 @@ function Home() {
     }
   };
   const projects = [
+    { title: "Trailblazer", role: "Applications", img: TrailblazerThumb, link: "/projects-trailblazer", category: "applications", bgSize: "contain" },
+    { title: "ResumeGenie", role: "Applications", img: ResumeThumb, link: "/projects-resumegenie", category: "applications" },
     { title: "Petsgram", role: "Applications", img: PetsThumb, link: "/projects-petstagram", category: "applications" },
     { title: "CoachK", role: "Applications", img: CoachThumb, link: "/projects-coachk", category: "applications" },
-    { title: "ResumeGenie", role: "Applications", img: ResumeThumb, link: "/projects-resumegenie", category: "applications" },
     { title: "Twitter API Bots", role: "Applications", img: TwitterThumb, link: "/projects-twitterapibots", category: "applications" },
     { title: "York Region Houses", role: "Web Design, Development", img: YR, link: "https://www.yorkregionhousesforsale.com/", category: "websites" },
     { title: "Sangha Brothers", role: "Web Design, Development", img: SB, link: "https://sanghabrothers.com/", category: "websites" },
@@ -208,7 +210,10 @@ I enjoy building things that actually get used.
               <div
                 className="temp-home__project-thumb"
                 aria-hidden="true"
-                style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.25)), url(${proj.img})` }}
+                style={{
+                  backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.25)), url(${proj.img})`,
+                  backgroundSize: proj.bgSize || undefined,
+                }}
               />
             </a>
           </div>

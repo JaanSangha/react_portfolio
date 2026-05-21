@@ -119,7 +119,7 @@ function TwitterAPIBots() {
       <main className="project-main">
         <section className="project-hero">
           <div className="project-hero__content">
-            <div className="project-hero__eyebrow">Case Study · AI + Automation</div>
+            <div className="project-hero__eyebrow">Project · AI + Automation</div>
             <div className="project-hero__badge-row">
               <span>Automation</span>
               <span aria-hidden="true">•</span>

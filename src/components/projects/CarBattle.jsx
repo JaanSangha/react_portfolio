@@ -79,7 +79,7 @@ function CarBattle() {
       <main className="project-main">
         <section className="project-hero">
           <div className="project-hero__content">
-            <div className="project-hero__eyebrow">Case Study · Gameplay Programming</div>
+            <div className="project-hero__eyebrow">Project · Gameplay Programming</div>
             <div className="project-hero__badge-row">
               <span>Game</span>
               <span aria-hidden="true">•</span>

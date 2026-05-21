@@ -1513,7 +1513,8 @@
   min-height: clamp(120px, 14vw, 180px);
   aspect-ratio: 16 / 7;
   max-height: 33vh;
-  background-size: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
   border: 1px solid rgba(245, 233, 216, 0.15);
   isolation: isolate;

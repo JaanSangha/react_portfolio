@@ -10,6 +10,7 @@ import Petstagram from "./projects/Petstagram";
 import TwitterAPIBots from "./projects/TwitterAPIBots";
 import ResumeGenie from "./projects/ResumeGenie";
 import CoachK from "./projects/CoachK";
+import Trailblazer from "./projects/Trailblazer";
 import Home from "./home/Home";
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import ScrollToTop from "./common/ScrollToTop";
@@ -32,6 +33,7 @@ return (
                 <Route path="/projects-petstagram" element={<Petstagram />} />
                 <Route path="/projects-twitterapibots" element={<TwitterAPIBots />} />
                 <Route path="/projects-resumegenie" element={<ResumeGenie />} />
+                <Route path="/projects-trailblazer" element={<Trailblazer />} />
                 <Route path="/projects-coachk" element={<CoachK />} />
                 <Route path="*" element={<Home />} />
             </Routes>
