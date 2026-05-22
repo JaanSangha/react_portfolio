@@ -178,6 +178,9 @@ function Trailblazer() {
           <div className="project-overview">
             <h3>Overview</h3>
             <p>
+              A road-trip app where shared trips inspire routes and community-added POIs make the map actually usable.
+            </p>
+            <p>
               Trailblazer (App Store listing name: Trailblazr) is a mobile road-trip planning and discovery app for travelers who want to find routes,
               campsites, and points of interest, build their own trips, and share them publicly.
             </p>
@@ -193,20 +196,22 @@ function Trailblazer() {
               Authentication supports Sign in with Apple or email/password, with onboarding gates for profile completion and legal acceptance, plus a web
               password reset flow that keeps sessions secure.
             </p>
-            <h4>The Challenge</h4>
+            <h4>The Problem</h4>
             <p>
-              Ship a full-featured map-first product that satisfies App Store policies (Sign in with Apple, account deletion, privacy) while keeping
-              onboarding fast and the map experience performant.
+              Trip apps often show routes without enough real-world stops. An empty map kills trust on first open. Trailblazer needed discovery (trips) and
+              supply (POIs) to work together.
             </p>
-            <h4>The Solution</h4>
+            <h4>The Product</h4>
+            <ul className="project-overview-list">
+              <li>Feed: browse, like, and save community trips (recent / popular / recommended)</li>
+              <li>Map: explore public POIs; add stops you’ve used (long-press or coordinate search)</li>
+              <li>Creator: build multi-stop trips, route preview, photos, rigs, publish + share link</li>
+              <li>Web: public trip pages with map preview + App Store install CTA</li>
+            </ul>
+            <h4>Why Community POIs Matter</h4>
             <p>
-              Built a React Native app with Expo and Mapbox, backed by Supabase for auth, data, RLS, and storage. A Vercel web layer powers share links,
-              legal pages, and password reset flows.
-            </p>
-            <h4>Key Outcomes</h4>
-            <p>
-              App Store approved May 2026 with Sign in with Apple, in-app account deletion, public trip sharing, and a stable map experience for large POI
-              sets.
+              The app is designed so every POI a traveler adds improves the map for everyone. Trips provide narrative; POIs provide utility. Onboarding
+              guides new users to add their first stop so the network effect can start.
             </p>
             <h4>Additional Highlights</h4>
             <ul className="project-overview-list">
