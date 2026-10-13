@@ -121,7 +121,7 @@ function Home() {
           <a href="/#contact" data-custom-cursor onClick={closeNav}>
             contact
           </a>
-          <a href="https://drive.google.com/file/d/1gmOIDLsD6UvjMiZdZTyuYz8KJ1cHE2Sh/view?usp=sharing" data-custom-cursor target="_blank" rel="noreferrer">
+          <a href="https://drive.google.com/file/d/1t0TgsnWkyovg8cE7gl0bzzhhhDwWSJo5/view?usp=sharing" data-custom-cursor target="_blank" rel="noreferrer">
             resume
           </a>
         </div>
